@@ -1,0 +1,17 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.example.upasthiti.MainActivity">
+
+    <item android:id="@+id/action_changepass_st"
+        android:title="पासवर्ड बदलें"
+        android:orderInCategory="100"
+        app:showAsAction="never"
+        />
+    <item android:id="@+id/action_logout_st"
+        android:title="लॉग आउट करें"
+        android:orderInCategory="100"
+        app:showAsAction="never"
+        android:icon="@drawable/logout"/>
+
+</menu>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.grievance.NearbySchemeStructureActivity">
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/header_withback"
+        android:id="@+id/header"/>
+
+    <include
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/footer"
+        android:id="@+id/footer"/>
+
+    <TextView
+        android:layout_below="@+id/header"
+        android:id="@+id/tv_title"
+        style="@style/ActivityHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="पंजीकृत शिकायत सूची"/>
+
+    <RelativeLayout
+        android:layout_below="@+id/tv_title"
+        android:layout_above="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/rv_data"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            android:text="No Record Found"
+            android:id="@+id/tv_notfound"
+            android:gravity="center"
+            android:textSize="22sp"
+            android:textColor="@color/holo_button_normal"
+            android:visibility="visible"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

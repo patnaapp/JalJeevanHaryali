@@ -1,0 +1,187 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--<include-->
+    <!--android:id="@+id/header"-->
+    <!--android:layout_width="fill_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignParentLeft="true"-->
+    <!--android:layout_alignParentTop="true"-->
+    <!--layout="@layout/header_view" />-->
+
+    <include
+        android:id="@+id/footer"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        layout="@layout/footer" />
+    <ScrollView
+        android:layout_below="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/lntxt12"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:textSize="15dp"
+                    android:textStyle="bold"
+                    android:textColor="#791a00"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="पहला फोटो लें " />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:textSize="15dp"
+                    android:textStyle="bold"
+                    android:textColor="#791a00"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="दूसरा  फोटो लें "/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/linearLayout1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lntxt12"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp" >
+
+                <ImageView
+                    android:id="@+id/imageButton1"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:clickable="true"
+                    android:onClick="onClick"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/numeric_1" />
+
+                <ImageButton
+                    android:id="@+id/imageButton2"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/numeric_2"
+                    android:onClick="onClick"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/lntxt34"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linearLayout1"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:textSize="15dp"
+                    android:textStyle="bold"
+                    android:textColor="#791a00"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="तीसरा  फोटो लें " />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:textSize="15dp"
+                    android:textStyle="bold"
+                    android:textColor="#791a00"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="चौथा  फोटो लें "/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lntxt34"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp" >
+
+                <ImageButton
+                    android:id="@+id/imageButton3"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/numeric_3"
+                    android:layout_marginRight="5dp"
+                    android:onClick="onClick" />
+
+                <ImageButton
+                    android:id="@+id/imageButton4"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/numeric_4"
+                    android:onClick="onClick"/>
+            </LinearLayout>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+            <Button
+                android:id="@+id/btnOk"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/footer"
+                android:layout_margin="20dp"
+                android:textColor="@android:color/white"
+                android:textSize="17sp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/buttonbackshape"
+                android:text="सुझाव अपलोड करें" />
+            <!--<Button-->
+                <!--android:id="@+id/btnupload"-->
+                <!--android:layout_width="150dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_above="@+id/footer"-->
+                <!--android:layout_margin="20dp"-->
+<!--android:onClick="btn_complainUpload"-->
+                <!--android:layout_centerHorizontal="true"-->
+                <!--android:background="@drawable/buttonbackshape"-->
+                <!--android:text="अपलोड करें " />-->
+
+</LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

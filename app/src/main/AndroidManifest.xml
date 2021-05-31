@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="bih.in.jaljeevanharyali">
+
+    <permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <permission android:name="android.permission.READ_PHONE_STATE" />
+    <permission android:name="android.permission.READ_PROFILE" />
+    <permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <permission
+        android:name="android.permission.FLASHLIGHT"
+        android:permissionGroup="android.permission-group.HARDWARE_CONTROLS"
+        android:protectionLevel="normal" />
+
+    <permission android:name="android.permission.INTERNET" />
+    <permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <permission android:name="android.permission.CAMERA" />
+    <permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-feature
+        android:name="android.hardware.camera.front"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <uses-permission
+        android:name="android.permission.FLASHLIGHT"
+        android:permissionGroup="android.permission-group.HARDWARE_CONTROLS"
+        android:protectionLevel="normal" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+
+    <permission
+        android:name="android.permission.MAPS_RECEIVE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="android.permission.MAPS_RECEIVE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+
+    <application
+        android:allowBackup="false"
+        android:hardwareAccelerated="false"
+        android:icon="@drawable/logo1"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:roundIcon="@drawable/logo1"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".activity.remarkUpdate.RemarkUpdateEditActivity"></activity>
+        <activity android:name=".activity.remarkUpdate.RemarkUpdateInspectionActivity" />
+        <activity android:name=".activity.remarkUpdate.RemarkUpdateListActivity" />
+        <activity android:name=".activity.grievance.NearbySchemeStructureActivity" />
+        <activity android:name=".activity.nursery.NursuryListEditActivity" />
+        <activity android:name=".activity.nursery.NursuryListActivity" />
+        <activity android:name=".activity.building.BuildingEntryActivity" />
+        <activity android:name=".activity.grievance.ViewStatus_Activity" />
+        <activity android:name=".activity.grievance.SearchSchemeActivity" />
+        <activity android:name=".activity.PreLoginActivity" />
+        <activity android:name=".activity.districtLogin.UploadPondPineInspectionActivity" />
+        <activity android:name=".activity.districtLogin.PondPineInspectionActivity" />
+        <activity android:name=".activity.districtLogin.DistrictWisePondListActivity" />
+        <activity android:name=".activity.grievance.GrievanceDetailActivity" />
+        <activity android:name=".activity.CAptureFieldLocationActivity" />
+        <activity android:name=".activity.grievance.TrackGrievanceActivity" />
+        <activity android:name=".activity.grievance.RegisterGrievanceActivity" />
+        <activity android:name=".activity.grievance.GrievanceHomeActivity" />
+        <activity android:name=".activity.grievance.GrievanceSignupActivity" />
+        <activity android:name=".activity.grievance.GrievanceLoginActivity" />
+        <activity android:name=".activity.sanrachnaProgress.SanrachnaProgressEditActivity" />
+        <activity android:name=".activity.sanrachnaProgress.SanrachnaProgressConfirmActivity" />
+        <activity android:name=".activity.sanrachnaProgress.SanrachnaProgressListActivity" />
+        <activity android:name=".activity.userCo.EncroachmentReportActivity" />
+        <activity android:name=".activity.userCo.PondEncrhmntEditListActivity" />
+        <activity android:name=".activity.userCo.MarkRemoveEncrhmntActivity" />
+        <activity android:name=".activity.userCo.PondEncroachmentListActivity" />
+        <activity android:name=".activity.userCo.DashboardCoActivity" />
+        <activity android:name=".activity.OtherDeptInspectionActivity" />
+        <activity android:name=".activity.OtherDeptInspectionListActivity" />
+        <activity android:name=".activity.ManregaInspectionActivity" />
+        <activity android:name=".activity.ManregaInspectionListActivity" />
+        <activity android:name=".activity.WellReportActivity" />
+        <activity android:name=".activity.PondReportActivity" />
+        <activity android:name=".activity.OtherSchemeListActivity" />
+        <activity android:name=".activity.OtherSchemeActivity" />
+        <activity android:name=".activity.ManregaListActivity" />
+        <activity android:name=".activity.ManregaActivity" />
+        <activity android:name=".activity.MultipulPhotoActivity2" />
+        <activity android:name=".activity.WellListEditActivity" />
+        <activity android:name=".activity.PondListEditActivity" />
+        <activity android:name=".activity.WellInspectionActivity" />
+        <activity android:name=".activity.PondInspectionActivity" />
+        <activity android:name=".activity.PondListActivity" />
+        <activity android:name=".activity.SignUpActivity" />
+        <activity android:name=".activity.WellListActivity" />
+        <activity android:name=".activity.DashboardActivity" />
+        <activity android:name=".activity.ManregaPhotoActivity" />
+        <activity android:name=".activity.MapWellActivity" />
+        <activity android:name=".activity.OtherSchemePhotoActivity" />
+        <activity android:name=".activity.grievance.GrievanceMultiplePhotoActivity" />
+        <activity android:name=".activity.grievance.OtherTypeGrievActivity" />
+        <activity android:name=".activity.grievance.ChangePassword_Activity" />
+        <activity android:name=".activity.grievance.Get_password_activity" />
+        <activity android:name=".activity.nursery.NurseryEntryActivity" />
+        <activity android:name=".activity.ManregaReportActivity" />
+        <activity android:name=".activity.nursery.NurseryReportActivity" />
+        <activity
+            android:name=".activity.LoginActivity"
+            android:label="Login"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activity.SplashActivity"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.MultiplePhotoActivity" />
+        <activity
+            android:name=".activity.CameraActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activity.MapActivity" />
+
+        <uses-library android:name="com.google.android.maps" />
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyBNF2tPuiGzKueUnhQIT7JfHGtn1zoYGZc" />
+    </application>
+
+</manifest>

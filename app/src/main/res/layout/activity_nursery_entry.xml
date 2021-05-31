@@ -1,0 +1,1596 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.nursery.NurseryEntryActivity">
+
+    <include
+        android:id="@+id/footer"
+        layout="@layout/footer"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        />
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/header"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        />
+
+    <TextView
+        android:id="@+id/tv_header"
+        android:layout_below="@+id/header"
+        style="@style/ActivityHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="पौधशाला सृज़न"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@+id/tv_header"
+        android:layout_above="@+id/footer">
+
+        <ScrollView
+            android:id="@+id/reg_form"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/footer"
+                android:layout_marginBottom="1dp"
+                android:layout_marginLeft="1dp"
+                android:layout_marginRight="1dp"
+                android:layout_marginTop="1dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:visibility="gone"
+                    android:orientation="vertical"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="3dp">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="3dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="जिला का नाम"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="#000000"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="3dp"
+                            android:text="*"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="#FD0E0E"
+                            android:textStyle="bold" />
+
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <Spinner
+                            android:id="@+id/spn_dist"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/spinner_bg"
+                            android:imeOptions="actionUnspecified"
+                            android:paddingRight="20dp"
+                            android:textAppearance="?android:textAppearanceSmall"
+                            android:textColor="#43D305" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="3dp">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="3dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="प्रखंड का नाम"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="#000000"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="3dp"
+                            android:text="*"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="#FD0E0E"
+                            android:textStyle="bold" />
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <Spinner
+                            android:id="@+id/spn_block"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/spinner_bg"
+                            android:imeOptions="actionUnspecified"
+                            android:paddingRight="20dp"
+                            android:textAppearance="?android:textAppearanceSmall" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_margin="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="2"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="13sp"
+                            android:text="District (जिला)"/>
+
+                        <TextView
+                            android:id="@+id/tv_district"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:lines="1"
+                            android:textSize="13sp"
+                            android:textStyle="normal"
+                            android:text="New Text"
+                            android:textColor="#151B54" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="13sp"
+                                android:text="Block (प्रखंड)"/>
+
+                            <TextView
+                                android:id="@+id/tv_block"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:lines="1"
+                                android:textSize="13sp"
+                                android:textStyle="normal"
+                                android:text="New Text"
+                                android:textColor="#151B54" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_margin="8dp"
+                    android:padding="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/shapecell">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <LinearLayout
+                            android:layout_weight="1"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:paddingRight="5dp">
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="3dp">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="क्षेत्र"
+                                    android:textAppearance="?android:attr/textAppearanceSmall"
+                                    android:textColor="#000000"
+                                    android:textStyle="bold" />
+                                <TextView
+                                    android:id="@+id/tv_title_area"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="3dp"
+                                    android:text="*"
+                                    android:textAppearance="?android:attr/textAppearanceSmall"
+                                    android:textColor="#FD0E0E"
+                                    android:textStyle="bold" />
+
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <Spinner
+                                    android:id="@+id/spn_area"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/spinner_bg"
+                                    android:imeOptions="actionUnspecified"
+                                    android:paddingRight="20dp"
+                                    android:textAppearance="?android:textAppearanceSmall" />
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_weight="1"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:paddingLeft="5dp">
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="3dp">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="पंचायत"
+                                    android:textAppearance="?android:attr/textAppearanceSmall"
+                                    android:textColor="#000000"
+                                    android:textStyle="bold" />
+                                <TextView
+                                    android:id="@+id/tv_titl_panch"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="3dp"
+                                    android:text="*"
+                                    android:textAppearance="?android:attr/textAppearanceSmall"
+                                    android:textColor="#EF1818"
+                                    android:textStyle="bold" />
+
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <Spinner
+                                    android:id="@+id/spn_panchayat"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/spinner_bg"
+                                    android:imeOptions="actionUnspecified"
+                                    android:paddingRight="20dp"
+                                    android:textAppearance="?android:textAppearanceSmall" />
+
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginTop="8dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <LinearLayout
+                            android:layout_weight="1"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:paddingRight="5dp">
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="3dp">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="वार्ड"
+                                    android:textAppearance="?android:attr/textAppearanceSmall"
+                                    android:textColor="#000000"
+                                    android:textStyle="bold" />
+                                <TextView
+                                    android:id="@+id/tv_title_ward"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="3dp"
+                                    android:text="*"
+                                    android:textAppearance="?android:attr/textAppearanceSmall"
+                                    android:textColor="#EF1818"
+                                    android:textStyle="bold" />
+
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <Spinner
+                                    android:id="@+id/spn_ward"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/spinner_bg"
+                                    android:imeOptions="actionUnspecified"
+                                    android:paddingRight="20dp"
+                                    android:textAppearance="?android:textAppearanceSmall" />
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_village"
+                            android:layout_weight="1"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:paddingLeft="5dp">
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="3dp">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="गाँव"
+                                    android:textAppearance="?android:attr/textAppearanceSmall"
+                                    android:textColor="#000000"
+                                    android:textStyle="bold" />
+                                <TextView
+                                    android:id="@+id/tv_title_vill"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="3dp"
+                                    android:text="*"
+                                    android:textAppearance="?android:attr/textAppearanceSmall"
+                                    android:textColor="#EF1818"
+                                    android:textStyle="bold" />
+
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <Spinner
+                                    android:id="@+id/spn_vilage"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/spinner_bg"
+                                    android:imeOptions="actionUnspecified"
+                                    android:paddingRight="20dp"
+                                    android:textAppearance="?android:textAppearanceSmall" />
+
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:visibility="visible"
+                    android:id="@+id/ll_nursery"
+                    android:layout_margin="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/shapecell">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="पौधशाला विवरण"
+                        android:gravity="center_horizontal"
+                        android:layout_margin="8dp"
+                        android:textSize="16sp"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textStyle="bold"/>
+
+                    <LinearLayout
+                        android:id="@+id/ll_police_station"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:paddingBottom="5dp"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:paddingTop="3dp">
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="3dp">
+
+                                <TextView
+                                    android:id="@+id/tv_policestationcode"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="पौधशाला का नाम "
+                                    android:textAppearance="?android:attr/textAppearanceSmall"
+                                    android:textColor="#000000"
+                                    android:textStyle="bold" />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="3dp"
+                                    android:text="*"
+                                    android:textAppearance="?android:attr/textAppearanceSmall"
+                                    android:textColor="#EF1818"
+                                    android:textStyle="bold" />
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <RelativeLayout
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content">
+
+
+                                    <EditText
+                                        android:id="@+id/et_plantation_name"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@drawable/edittext_style"
+                                        android:hint="पौधशाला का नाम डाले"
+                                        android:inputType="textCapWords"
+                                        android:padding="10dp"
+                                        android:textColor="#000000"
+                                        android:textColorHint="@android:color/darker_gray"
+                                        android:maxLength="30"/>
+
+
+                                </RelativeLayout>
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <!-- <LinearLayout
+                             android:layout_width="fill_parent"
+                             android:layout_height="wrap_content"
+                             android:gravity="center"
+                             android:visibility="gone"
+                             android:orientation="vertical"
+                             android:paddingBottom="5dp"
+                             android:paddingLeft="10dp"
+                             android:paddingRight="10dp"
+                             android:paddingTop="3dp">
+
+                             <LinearLayout
+                                 android:layout_width="fill_parent"
+                                 android:layout_height="wrap_content"
+                                 android:layout_marginBottom="3dp">
+
+                                 <TextView
+                                     android:id="@+id/tv_username"
+                                     android:layout_width="wrap_content"
+                                     android:layout_height="wrap_content"
+                                     android:text="किसान का नाम (हिंदी में) "
+                                     android:textAppearance="?android:attr/textAppearanceSmall"
+                                     android:textColor="#000000"
+                                     android:textStyle="bold" />
+                                 <TextView
+                                     android:layout_width="wrap_content"
+                                     android:layout_height="wrap_content"
+                                     android:layout_marginLeft="3dp"
+                                     android:text="*"
+                                     android:textAppearance="?android:attr/textAppearanceSmall"
+                                     android:textColor="#000000"
+                                     android:textStyle="bold" />
+
+                             </LinearLayout>
+
+                             <LinearLayout
+                                 android:layout_width="fill_parent"
+                                 android:layout_height="wrap_content"
+                                 android:orientation="vertical">
+
+                                 <RelativeLayout
+                                     android:layout_width="fill_parent"
+                                     android:layout_height="wrap_content">
+
+
+                                     <EditText
+                                         android:id="@+id/et_father_name"
+                                         android:layout_width="match_parent"
+                                         android:layout_height="wrap_content"
+                                         android:background="@drawable/edittext_style"
+                                         android:hint="किसान का नाम (हिंदी में) डाले "
+                                         android:inputType="text"
+                                         android:padding="10dp"
+                                         android:singleLine="true"
+                                         android:textColor="#000000"
+                                         android:textColorHint="@android:color/darker_gray"
+                                         android:maxLength="50"/>
+
+                                 </RelativeLayout>
+
+                             </LinearLayout>
+                         </LinearLayout>-->
+
+
+                        <LinearLayout
+                            android:visibility="gone"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:paddingBottom="5dp"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:paddingTop="3dp">
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="3dp">
+
+                                <TextView
+                                    android:id="@+id/address"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Address"
+                                    android:textAppearance="?android:attr/textAppearanceSmall"
+                                    android:textColor="#000000"
+                                    android:textStyle="bold" />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="3dp"
+                                    android:text="*"
+                                    android:textAppearance="?android:attr/textAppearanceSmall"
+                                    android:textColor="#FFFFFF"
+                                    android:textStyle="bold" />
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content">
+
+                                <EditText
+                                    android:id="@+id/et_adress"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/edittext_style"
+                                    android:hint="Enter Address"
+                                    android:inputType="text"
+                                    android:singleLine="true"
+                                    android:padding="10dp"
+                                    android:textColor="#000000"
+                                    android:textColorHint="@android:color/darker_gray"
+                                    android:maxLength="50" />
+                            </LinearLayout>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:visibility="gone"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:paddingBottom="5dp"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:paddingTop="3dp">
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="3dp">
+
+                                <TextView
+                                    android:id="@+id/password"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Father/Husband Name"
+                                    android:textAppearance="?android:attr/textAppearanceSmall"
+                                    android:textColor="#000000"
+                                    android:textStyle="bold" />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="3dp"
+                                    android:text="*"
+                                    android:textAppearance="?android:attr/textAppearanceSmall"
+                                    android:textColor="#FFFFFF"
+                                    android:textStyle="bold" />
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content">
+
+                                <EditText
+                                    android:id="@+id/et_father_husband"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/edittext_style"
+                                    android:hint="Enter Father / Husband Name"
+                                    android:inputType="text"
+                                    android:singleLine="true"
+                                    android:padding="10dp"
+                                    android:textColor="#000000"
+                                    android:textColorHint="@android:color/darker_gray"
+                                    android:maxLength="50" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:visibility="gone"
+                            android:orientation="vertical"
+                            android:paddingBottom="5dp"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:paddingTop="3dp">
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="3dp">
+
+                                <TextView
+                                    android:id="@+id/mobilenumber"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="पिता/पति का नाम (हिंदी में)"
+                                    android:textAppearance="?android:attr/textAppearanceSmall"
+                                    android:textColor="#000000"
+                                    android:textStyle="bold" />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="3dp"
+                                    android:text="*"
+                                    android:visibility="gone"
+                                    android:textAppearance="?android:attr/textAppearanceSmall"
+                                    android:textColor="#FFFFFF"
+                                    android:textStyle="bold" />
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content">
+
+                                <EditText
+                                    android:id="@+id/et_police_station_mobile_number"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/edittext_style"
+                                    android:hint="पिता/पति का नाम (हिंदी में) डाले"
+                                    android:inputType="number"
+                                    android:padding="10dp"
+                                    android:singleLine="true"
+                                    android:textColor="#000000"
+                                    android:textColorHint="@android:color/darker_gray"
+                                    android:maxLength="11"/>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:weightSum="2">
+
+                        <LinearLayout
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:paddingBottom="5dp"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:paddingTop="3dp">
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="3dp">
+
+                                <TextView
+                                    android:id="@+id/tv_outpostcode"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="क्षेत्रफल (हेक्टेयर में) "
+                                    android:textAppearance="?android:attr/textAppearanceSmall"
+                                    android:textColor="#000000"
+                                    android:textStyle="bold" />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="3dp"
+                                    android:text="*"
+                                    android:textAppearance="?android:attr/textAppearanceSmall"
+                                    android:textColor="#EF1818"
+                                    android:textStyle="bold" />
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <RelativeLayout
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content">
+
+
+                                    <EditText
+                                        android:id="@+id/et_area"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@drawable/edittext_style"
+                                        android:hint="क्षेत्रफल (हेक्टेयर में) डाले"
+                                        android:inputType="numberDecimal"
+                                        android:padding="10dp"
+                                        android:singleLine="true"
+                                        android:textColor="#000000"
+                                        android:textColorHint="@android:color/darker_gray"
+                                        android:maxLength="11"/>
+
+                                </RelativeLayout>
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:paddingBottom="5dp"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:paddingTop="3dp">
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="3dp">
+
+                                <TextView
+                                    android:id="@+id/outpost_name"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="पौधे की संख्या"
+                                    android:textAppearance="?android:attr/textAppearanceSmall"
+                                    android:textColor="#000000"
+                                    android:textStyle="bold" />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="3dp"
+                                    android:text="*"
+                                    android:textAppearance="?android:attr/textAppearanceSmall"
+                                    android:textColor="#EF1818"
+                                    android:textStyle="bold" />
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content">
+
+                                <EditText
+                                    android:id="@+id/et_tree"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/edittext_style"
+                                    android:hint="पौधे की संख्या डाले"
+                                    android:inputType="number"
+                                    android:padding="10dp"
+                                    android:singleLine="true"
+                                    android:textColor="#000000"
+                                    android:textColorHint="@android:color/darker_gray"
+                                    android:maxLength="25"/>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+
+                    <LinearLayout
+                        android:layout_marginBottom="8dp"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:paddingBottom="5dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="3dp">
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="3dp">
+
+                            <TextView
+                                android:id="@+id/outpost_name_1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="मोबाइल नंबर(संपर्क व्यक्ति का)"
+                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                android:textColor="#000000"
+                                android:textStyle="bold" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="3dp"
+                                android:text="*"
+                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                android:textColor="#EF1818"
+                                android:textStyle="bold" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content">
+
+                            <EditText
+                                android:id="@+id/et_mobile"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/edittext_style"
+                                android:hint="मोबाइल नंबर(संपर्क व्यक्ति का) डाले"
+                                android:inputType="numberDecimal"
+                                android:padding="10dp"
+                                android:singleLine="true"
+                                android:textColor="#000000"
+                                android:textColorHint="@android:color/darker_gray"
+                                android:maxLength="10"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:paddingBottom="5dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="3dp">
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="3dp">
+
+                            <TextView
+                                android:id="@+id/out_post_landline"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Designation "
+                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                android:textColor="#000000"
+                                android:textStyle="bold" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="3dp"
+                                android:text="*"
+                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                android:textColor="#000000"
+                                android:textStyle="bold" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content">
+
+                            <EditText
+                                android:id="@+id/et_conform_password"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/edittext_style"
+                                android:hint="Confirm Password "
+                                android:inputType="text"
+                                android:singleLine="true"
+                                android:padding="10dp"
+                                android:textColor="#000000"
+                                android:textColorHint="@android:color/darker_gray"
+                                android:maxLength="25"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_building"
+                    android:layout_margin="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/shapecell">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="भवन विवरण"
+                        android:gravity="center_horizontal"
+                        android:layout_margin="8dp"
+                        android:textSize="16sp"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textStyle="bold"/>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:paddingBottom="5dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="3dp">
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="3dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="विभाग का नाम "
+                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                android:textColor="#000000"
+                                android:textStyle="bold" />
+                            <TextView
+                                android:id="@+id/tv_title_dept"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="3dp"
+                                android:text="*"
+                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                android:textColor="#EF1818"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <Spinner
+                                android:id="@+id/spn_department"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/spinner_bg"
+                                android:imeOptions="actionUnspecified"
+                                android:paddingRight="20dp"
+                                android:textAppearance="?android:textAppearanceSmall" />
+
+                        </LinearLayout>
+
+                        <EditText
+                            android:layout_marginTop="8dp"
+                            android:id="@+id/et_dept_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/edittext_style"
+                            android:hint="विभाग का नाम डाले"
+                            android:inputType="textCapWords"
+                            android:padding="10dp"
+                            android:textColor="#000000"
+                            android:textColorHint="@android:color/darker_gray"
+                            android:maxLength="30"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:paddingBottom="5dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="3dp">
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="3dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="भवन का प्रकार"
+                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                android:textColor="#000000"
+                                android:textStyle="bold" />
+                            <TextView
+                                android:id="@+id/tv_title_build_type"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="3dp"
+                                android:text="*"
+                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                android:textColor="#EF1818"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <Spinner
+                                android:id="@+id/spn_building_type"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/spinner_bg"
+                                android:imeOptions="actionUnspecified"
+                                android:paddingRight="20dp"
+                                android:textAppearance="?android:textAppearanceSmall" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:paddingBottom="5dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="3dp">
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="3dp">
+
+                            <TextView
+                                android:id="@+id/tv_bhawan_name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="भवन का नाम "
+                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                android:textColor="#000000"
+                                android:textStyle="bold" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="3dp"
+                                android:text="*"
+                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                android:textColor="#EF1818"
+                                android:textStyle="bold" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <RelativeLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content">
+
+
+                                <EditText
+                                    android:id="@+id/et_building_name"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/edittext_style"
+                                    android:hint="भवन का नाम डाले"
+                                    android:inputType="textCapWords"
+                                    android:padding="10dp"
+                                    android:textColor="#000000"
+                                    android:textColorHint="@android:color/darker_gray"
+                                    android:maxLength="30"/>
+
+
+                            </RelativeLayout>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <LinearLayout
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:paddingBottom="5dp"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="5dp"
+                            android:paddingTop="3dp">
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="3dp">
+
+                                <TextView
+                                    android:id="@+id/tv_bhawan_id"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="भवन Code"
+                                    android:textAppearance="?android:attr/textAppearanceSmall"
+                                    android:textColor="#000000"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:visibility="gone"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="3dp"
+                                    android:text="*"
+                                    android:textAppearance="?android:attr/textAppearanceSmall"
+                                    android:textColor="#000000"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <RelativeLayout
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content">
+
+
+                                    <EditText
+                                        android:id="@+id/et_building_id"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@drawable/edittext_style"
+                                        android:hint="भवन Code डाले"
+                                        android:inputType="textCapCharacters"
+                                        android:padding="10dp"
+                                        android:singleLine="true"
+                                        android:textColor="#000000"
+                                        android:textColorHint="@android:color/darker_gray"
+                                        android:maxLength="11"/>
+
+                                </RelativeLayout>
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:paddingBottom="5dp"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="10dp"
+                            android:paddingTop="3dp">
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="3dp">
+
+                                <TextView
+                                    android:id="@+id/tv_bhawan_area"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="छत क्षेत्रफल (वर्ग फुट में) "
+                                    android:textAppearance="?android:attr/textAppearanceSmall"
+                                    android:textColor="#000000"
+                                    android:textStyle="bold" />
+                                <TextView
+                                    android:visibility="gone"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="3dp"
+                                    android:text="*"
+                                    android:textAppearance="?android:attr/textAppearanceSmall"
+                                    android:textColor="#000000"
+                                    android:textStyle="bold" />
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content">
+
+                                <EditText
+                                    android:id="@+id/et_chat_area"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/edittext_style"
+                                    android:hint="छत क्षेत्रफल डाले"
+                                    android:inputType="numberDecimal"
+                                    android:maxLength="25"
+                                    android:padding="10dp"
+                                    android:singleLine="true"
+                                    android:textColor="#000000"
+                                    android:textColorHint="@android:color/darker_gray" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginBottom="8dp"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:paddingBottom="5dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="3dp">
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="3dp">
+
+                            <TextView
+                                android:id="@+id/tv_consumer_no_title"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="बिजली उपभोक्ता संख्या"
+                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                android:textColor="#000000"
+                                android:textStyle="bold" />
+                            <TextView
+                                android:visibility="gone"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="3dp"
+                                android:text="*"
+                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                android:textColor="#000000"
+                                android:textStyle="bold" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content">
+
+                            <EditText
+                                android:id="@+id/et_consumer_id"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/edittext_style"
+                                android:hint="बिजली उपभोक्ता संख्या डाले"
+                                android:inputType="textCapCharacters"
+                                android:padding="10dp"
+                                android:singleLine="true"
+                                android:textColor="#000000"
+                                android:textColorHint="@android:color/darker_gray"
+                                android:maxLength="25"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_margin="8dp"
+                    android:padding="8dp"
+                    android:background="@drawable/shapecell"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_photo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="  फोटो  "
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginBottom="8dp"
+                        android:textSize="16sp"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textStyle="bold"/>
+
+                    <LinearLayout
+                        android:weightSum="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp">
+
+                        <RelativeLayout
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:id="@+id/rl_photo"
+                            android:background="@android:color/darker_gray"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+                            <ImageView
+                                android:onClick="onClickTakePhoto"
+                                android:id="@+id/img1"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:clickable="true"
+                                android:scaleType="fitXY"
+                                />
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:src="@drawable/ic_action_photo"/>
+
+                                <TextView
+                                    android:id="@+id/text_p1"
+                                    android:layout_width="110dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:gravity="center"
+                                    android:padding="5dp"
+                                    android:text="फोटो लें" />
+                            </LinearLayout>
+                        </RelativeLayout>
+
+<!--                        <View-->
+<!--                            android:visibility="gone"-->
+<!--                            android:layout_width="0dp"-->
+<!--                            android:layout_weight=".005"-->
+<!--                            android:layout_height="match_parent"-->
+<!--                            android:background="@android:color/white"/>-->
+
+<!--                        <RelativeLayout-->
+<!--                            android:visibility="gone"-->
+<!--                            android:background="@android:color/darker_gray"-->
+<!--                            android:id="@+id/re_p2"-->
+<!--                            android:layout_width="0dp"-->
+<!--                            android:layout_weight=".5"-->
+<!--                            android:layout_height="fill_parent">-->
+
+<!--                            <ImageView-->
+<!--                                android:id="@+id/img2"-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="fill_parent"-->
+<!--                                android:background="@null"-->
+<!--                                android:scaleType="fitXY"-->
+<!--                                />-->
+<!--                            <LinearLayout-->
+<!--                                android:layout_width="wrap_content"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:layout_centerInParent="true"-->
+<!--                                android:orientation="vertical">-->
+
+<!--                                <ImageView-->
+<!--                                    android:layout_width="wrap_content"-->
+<!--                                    android:layout_height="wrap_content"-->
+<!--                                    android:layout_gravity="center_horizontal"-->
+<!--                                    android:src="@drawable/ic_action_photo"/>-->
+<!--                                <TextView-->
+<!--                                    android:id="@+id/text_p2"-->
+<!--                                    android:text="नागरिक के साथ सेल्फी लें"-->
+<!--                                    android:layout_width="wrap_content"-->
+<!--                                    android:layout_height="wrap_content"-->
+<!--                                    android:padding="5dp"-->
+<!--                                    android:layout_gravity="center_vertical" />-->
+<!--                            </LinearLayout>-->
+<!--                        </RelativeLayout>-->
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginTop="8dp"
+                        android:weightSum="1"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:onClick="onClick_ViewImg"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:gravity="center"
+                            android:id="@+id/viewph1"
+                            android:text="View Photo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"></TextView>
+
+
+<!--                        <TextView-->
+<!--                            android:onClick="onClick_ViewImg2"-->
+<!--                            android:textStyle="bold"-->
+<!--                            android:textColor="@color/colorPrimary"-->
+<!--                            android:gravity="center"-->
+<!--                            android:id="@+id/viewph2"-->
+<!--                            android:text="View Photo"-->
+<!--                            android:layout_width="0dp"-->
+<!--                            android:layout_weight="0.5"-->
+<!--                            android:layout_height="wrap_content"></TextView>-->
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginBottom="8dp"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="3dp">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="3dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="अभ्युति"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="#000000"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content">
+
+                        <EditText
+                            android:id="@+id/et_remark"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/edittext_style"
+                            android:hint="अभ्युति डाले"
+                            android:inputType="textCapSentences"
+                            android:padding="10dp"
+                            android:singleLine="true"
+                            android:textColor="#000000"
+                            android:textColorHint="@android:color/darker_gray"
+                            android:maxLength="25"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <Button
+                    android:layout_margin="12dp"
+                    android:id="@+id/btn_save"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    android:background="@drawable/buttonbackshape"
+                    android:text="सुरक्षित करे"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+</RelativeLayout>

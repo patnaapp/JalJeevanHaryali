@@ -1,0 +1,1483 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:alpha="0.9"
+    android:background="@color/holo_control_normal">
+
+    <TextView
+        android:layout_above="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_appver"
+        android:textColor="@color/holo_button_normal"
+        android:textAlignment="center"
+        android:text="App Version 1.0"
+        android:layout_marginBottom="4dp"/>
+
+    <include
+        android:id="@+id/footer"
+        layout="@layout/footer"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        />
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/header"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@+id/header"
+        android:layout_above="@+id/tv_appver"
+        android:background="@color/holo_control_normal">
+
+        <LinearLayout
+            android:id="@+id/ll_heading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:paddingBottom="4dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.8"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/tv_userName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:text="निरीक्षण प्रतिवेदन "
+                        android:layout_centerVertical="true"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="@color/colorPrimaryDark"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginLeft="6dp"
+                        android:weightSum="2">
+                        <TextView
+                            android:id="@+id/tv_district"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:padding="2dp"
+                            android:textSize="14sp"
+                            android:text="जिला: "
+                            android:textColor="@color/colorPrimaryDark"/>
+
+                        <TextView
+                            android:id="@+id/tv_block"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="2dp"
+                            android:textSize="14sp"
+                            android:layout_weight="1"
+                            android:text="जिला:"
+                            android:textColor="@color/colorPrimaryDark"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.2"
+                    android:layout_width="56dp"
+                    android:layout_height="wrap_content">
+                    <Button
+                        android:layout_marginRight="8dp"
+                        android:layout_marginLeft="4dp"
+                        android:id="@+id/btn_logout"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/logout1"
+                        android:textColor="@color/colorPrimaryDark"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimaryDark" />
+
+        </LinearLayout>
+
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:scaleType="fitXY"
+                    android:src="@drawable/jal_jeevan_logo_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#330099" />
+
+                <LinearLayout
+                    android:layout_marginTop="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/rl_sync_data"
+                        android:background="@drawable/buttonshapegreen1"
+                        android:padding="4dp"
+                        android:gravity="center"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="12dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/iv_sync"
+                            android:layout_width="26dp"
+                            android:layout_height="26dp"
+                            android:layout_centerVertical="true"
+                            android:tint="@color/colorAccent"
+                            android:src="@drawable/ic_autorenew_black_24dp"/>
+
+                        <TextView
+                            android:id="@+id/tv_sync_title"
+                            android:layout_marginLeft="4dp"
+                            android:layout_toRightOf="@+id/iv_sync"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorAccent"
+                            android:text="सर्वर से डेटा लोड करें"/>
+                    </RelativeLayout>
+
+
+                    <View
+                        android:layout_marginTop="8dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@color/colorPrimaryDark" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:visibility="visible"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:visibility="visible"
+                        android:id="@+id/ll_rdd"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/mcv_structure"
+                            style="@style/CardView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/mtrl_card_spacing"
+                            android:layout_marginTop="@dimen/mtrl_card_spacing"
+                            android:layout_marginRight="@dimen/mtrl_card_spacing"
+                            app:cardBackgroundColor="@color/group_button_dialog_pressed_holo_light"
+                            app:cardCornerRadius="5dp"
+                            android:minHeight="40dp">
+
+                            <LinearLayout
+                                android:id="@+id/ll_pond_click"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <RelativeLayout
+                                    android:layout_margin="8dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:layout_alignParentLeft="true"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="22dp"
+                                        android:textSize="16sp"
+                                        android:textStyle="bold"
+                                        android:textColor="@color/colorPrimaryDark"
+                                        android:layout_centerVertical="true"
+                                        android:text="जल संरचनाओं का सत्यापन/सर्वेक्षण "/>
+
+                                    <ImageView
+                                        android:id="@+id/iv_pond_drpdwn"
+                                        android:layout_alignParentRight="true"
+                                        android:layout_width="28dp"
+                                        android:layout_height="24dp"
+                                        android:src="@drawable/ic_arrow_drop_down_black_24dp"/>
+                                </RelativeLayout>
+
+                                <LinearLayout
+                                    android:visibility="visible"
+                                    android:id="@+id/ll_pond_menu"
+                                    android:layout_marginBottom="4dp"
+                                    android:layout_marginLeft="4dp"
+                                    android:layout_marginRight="4dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:weightSum="3"
+                                    android:orientation="horizontal">
+
+
+                                    <LinearLayout
+                                        android:id="@+id/Pond_List_Layout"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="6dp"
+                                        android:layout_weight="1"
+                                        android:background="@drawable/buttonshape"
+                                        android:orientation="vertical"
+                                        android:padding="6dp">
+
+                                        <RelativeLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content">
+
+                                            <ImageView
+                                                android:layout_marginTop="8dp"
+                                                android:layout_width="40dp"
+                                                android:layout_height="40dp"
+                                                android:layout_centerInParent="true"
+                                                android:src="@drawable/ic_assignment"
+                                                android:contentDescription="@string/image" />
+                                        </RelativeLayout>
+
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:gravity="center"
+                                            android:lines="2"
+                                            android:padding="3dp"
+                                            android:text="सत्यापन/सर्वेक्षण करें"
+                                            android:textAppearance="?android:attr/textAppearanceSmall"
+                                            android:textColor="@android:color/white"
+
+                                            android:textSize="15sp"
+                                            android:textStyle="bold" />
+
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:id="@+id/linearlayout_eidt_pond"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="6dp"
+                                        android:layout_weight="1"
+                                        android:background="@drawable/buttonshape"
+                                        android:orientation="vertical"
+                                        android:padding="5dp">
+
+                                        <RelativeLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content">
+
+                                            <ImageView
+                                                android:layout_marginTop="8dp"
+                                                android:layout_width="40dp"
+                                                android:layout_height="40dp"
+                                                android:layout_centerInParent="true"
+                                                android:src="@drawable/ic_cloud_upload"
+                                                android:contentDescription="@string/image" />
+
+                                            <TextView
+                                                android:id="@+id/pending_sudhar_pond"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_alignParentRight="true"
+                                                android:layout_marginLeft="5dp"
+                                                android:background="@drawable/circuler_shape_red_small"
+                                                android:gravity="center"
+                                                android:text="0"
+                                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                                android:textColor="#990033"
+                                                android:textStyle="bold"
+
+                                                />
+                                        </RelativeLayout>
+
+                                        <TextView
+                                            android:id="@+id/pondtextView"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:gravity="center"
+                                            android:lines="2"
+                                            android:padding="5dp"
+                                            android:text="अपलोड करें"
+                                            android:textAppearance="?android:attr/textAppearanceSmall"
+                                            android:textColor="@android:color/white"
+                                            android:textSize="15sp"
+                                            android:textStyle="bold" />
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:id="@+id/ll_upload_pond_data"
+                                        android:layout_weight="1"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="6dp"
+                                        android:background="@drawable/buttonshape"
+                                        android:orientation="vertical"
+                                        android:padding="5dp">
+
+                                        <RelativeLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content">
+
+                                            <ImageView
+                                                android:layout_marginTop="8dp"
+                                                android:layout_width="40dp"
+                                                android:layout_height="40dp"
+                                                android:layout_centerInParent="true"
+                                                android:src="@drawable/ic_pageview"
+                                                android:contentDescription="@string/image" />
+
+                                            <TextView
+                                                android:visibility="gone"
+                                                android:id="@+id/pending_upload_pond"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_alignParentRight="true"
+                                                android:layout_marginLeft="5dp"
+                                                android:background="@drawable/circuler_shape_red_small"
+                                                android:gravity="center"
+                                                android:text="0"
+                                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                                android:textColor="#990033"
+                                                android:textStyle="bold"
+
+                                                />
+                                        </RelativeLayout>
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:gravity="center"
+                                            android:lines="2"
+                                            android:padding="5dp"
+                                            android:text="निरीक्षित रिपोर्ट देखें"
+                                            android:textAppearance="?android:attr/textAppearanceSmall"
+                                            android:textColor="@android:color/white"
+                                            android:textSize="15sp"
+                                            android:textStyle="bold" />
+                                    </LinearLayout>
+
+                                </LinearLayout>
+                            </LinearLayout>
+
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <com.google.android.material.card.MaterialCardView
+                            style="@style/CardView"
+                            android:id="@+id/mcv_well"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/mtrl_card_spacing"
+                            android:layout_marginTop="@dimen/mtrl_card_spacing"
+                            android:layout_marginRight="@dimen/mtrl_card_spacing"
+                            app:cardBackgroundColor="@color/group_button_dialog_pressed_holo_light"
+                            app:cardCornerRadius="5dp"
+                            android:minHeight="40dp">
+
+                            <LinearLayout
+                                android:id="@+id/ll_well_click"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <RelativeLayout
+                                    android:layout_margin="8dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="22dp"
+                                        android:textSize="16sp"
+                                        android:textStyle="bold"
+                                        android:textColor="@color/colorPrimaryDark"
+                                        android:layout_centerVertical="true"
+                                        android:text="कुँआ/चापाकल का सत्यापन/सर्वेक्षण"/>
+
+                                    <ImageView
+                                        android:id="@+id/iv_well_drpdwn"
+                                        android:layout_alignParentRight="true"
+                                        android:layout_width="28dp"
+                                        android:layout_height="24dp"
+                                        android:src="@drawable/ic_arrow_drop_down_black_24dp"/>
+                                </RelativeLayout>
+
+                                <LinearLayout
+                                    android:visibility="visible"
+                                    android:id="@+id/ll_well_menu"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:weightSum="3"
+                                    android:orientation="horizontal">
+
+                                    <LinearLayout
+                                        android:id="@+id/WellList_Layout"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="10dp"
+                                        android:layout_weight="1"
+                                        android:background="@drawable/buttonshape"
+                                        android:orientation="vertical"
+                                        android:padding="5dp">
+
+                                        <ImageView
+                                            android:layout_marginTop="8dp"
+                                            android:layout_width="40dp"
+                                            android:layout_height="40dp"
+                                            android:layout_gravity="center"
+                                            android:src="@drawable/ic_assignment"
+                                            android:contentDescription="@string/image" />
+
+                                        <View
+                                            android:layout_width="1dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginLeft="5dp"
+                                            android:layout_marginRight="5dp"
+                                            android:background="@android:color/darker_gray" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:gravity="center"
+                                            android:lines="2"
+                                            android:padding="3dp"
+                                            android:text="सत्यापन/सर्वेक्षण करें"
+                                            android:textAppearance="?android:attr/textAppearanceSmall"
+                                            android:textColor="@android:color/white"
+                                            android:textSize="15sp"
+                                            android:textStyle="bold" />
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:id="@+id/linearlayout_edit_well"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="10dp"
+                                        android:layout_weight="1"
+                                        android:background="@drawable/buttonshape"
+                                        android:orientation="vertical"
+                                        android:padding="5dp">
+
+                                        <RelativeLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content">
+
+                                            <ImageView
+                                                android:layout_marginTop="8dp"
+                                                android:layout_width="40dp"
+                                                android:layout_height="40dp"
+                                                android:layout_centerInParent="true"
+                                                android:src="@drawable/ic_cloud_upload"
+                                                android:contentDescription="@string/image" />
+
+                                            <TextView
+                                                android:id="@+id/pending_sudhar_well"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_alignParentRight="true"
+                                                android:layout_marginLeft="5dp"
+                                                android:background="@drawable/circuler_shape_red_small"
+                                                android:gravity="center"
+                                                android:text="0"
+                                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                                android:textColor="#990033"
+                                                android:textStyle="bold"
+
+                                                />
+                                        </RelativeLayout>
+
+                                        <TextView
+                                            android:id="@+id/textView"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:gravity="center"
+                                            android:lines="2"
+                                            android:padding="5dp"
+                                            android:text="अपलोड करें"
+                                            android:textAppearance="?android:attr/textAppearanceSmall"
+                                            android:textColor="@android:color/white"
+                                            android:textSize="15sp"
+                                            android:textStyle="bold" />
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:id="@+id/ll_uplaod_well_data"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:layout_margin="10dp"
+                                        android:background="@drawable/buttonshape"
+                                        android:orientation="vertical"
+                                        android:padding="5dp">
+
+                                        <RelativeLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content">
+
+                                            <ImageView
+                                                android:layout_marginTop="8dp"
+                                                android:layout_width="40dp"
+                                                android:layout_height="40dp"
+                                                android:layout_centerInParent="true"
+                                                android:src="@drawable/ic_pageview"
+                                                android:contentDescription="@string/image" />
+
+                                            <TextView
+                                                android:visibility="gone"
+                                                android:id="@+id/pending_upload_well"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_alignParentRight="true"
+                                                android:layout_marginLeft="5dp"
+                                                android:background="@drawable/circuler_shape_red_small"
+                                                android:gravity="center"
+                                                android:text="0"
+                                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                                android:textColor="#990033"
+                                                android:textStyle="bold"
+
+                                                />
+                                        </RelativeLayout>
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:gravity="center"
+                                            android:lines="2"
+                                            android:padding="5dp"
+                                            android:text="निरीक्षित रिपोर्ट देखें"
+                                            android:textAppearance="?android:attr/textAppearanceSmall"
+                                            android:textColor="@android:color/white"
+                                            android:textSize="15sp"
+                                            android:textStyle="bold" />
+                                    </LinearLayout>
+
+
+                                    <LinearLayout
+                                        android:visibility="gone"
+                                        android:id="@+id/linearlayout_ben_ward_"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="10dp"
+                                        android:layout_weight=".33"
+                                        android:background="@drawable/buttonshape"
+                                        android:orientation="vertical"
+                                        android:padding="5dp">
+
+                                        <RelativeLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content">
+
+                                            <ImageView
+                                                android:layout_width="60dp"
+                                                android:layout_height="60dp"
+                                                android:layout_centerInParent="true"
+                                                android:background="@drawable/draft"
+                                                android:contentDescription="@string/image" />
+
+                                        </RelativeLayout>
+
+                                        <TextView
+                                            android:id="@+id/textWardEdit1"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:gravity="center"
+                                            android:lines="2"
+                                            android:padding="5dp"
+                                            android:text="@string/set_ward_for_ben"
+                                            android:textAppearance="?android:attr/textAppearanceSmall"
+                                            android:textColor="@android:color/white"
+                                            android:textSize="12sp"
+                                            android:textStyle="normal" />
+
+                                    </LinearLayout>
+                                </LinearLayout>
+                            </LinearLayout>
+
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/mcv_scheme"
+                            style="@style/CardView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/mtrl_card_spacing"
+                            android:layout_marginTop="@dimen/mtrl_card_spacing"
+                            android:layout_marginRight="@dimen/mtrl_card_spacing"
+                            app:cardBackgroundColor="@color/group_button_dialog_pressed_holo_light"
+                            app:cardCornerRadius="5dp"
+                            android:minHeight="40dp">
+
+                            <LinearLayout
+                                android:id="@+id/ll_manrega_click"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <RelativeLayout
+                                    android:layout_margin="8dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="22dp"
+                                        android:textSize="16sp"
+                                        android:textStyle="bold"
+                                        android:textColor="@color/colorPrimaryDark"
+                                        android:layout_centerVertical="true"
+                                        android:text="योजना का निरीक्षण"/>
+
+                                    <ImageView
+                                        android:id="@+id/iv_manrega_drpdwn"
+                                        android:layout_alignParentRight="true"
+                                        android:layout_width="28dp"
+                                        android:layout_height="24dp"
+                                        android:src="@drawable/ic_arrow_drop_down_black_24dp"/>
+                                </RelativeLayout>
+
+                                <LinearLayout
+                                    android:visibility="visible"
+                                    android:id="@+id/ll_manreag_menu"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:weightSum="3"
+                                    android:orientation="horizontal">
+
+                                    <LinearLayout
+                                        android:id="@+id/ll_manrega_add"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="10dp"
+                                        android:layout_weight="1"
+                                        android:background="@drawable/buttonshape"
+                                        android:orientation="vertical"
+                                        android:padding="5dp">
+
+                                        <ImageView
+                                            android:layout_marginTop="8dp"
+                                            android:layout_width="40dp"
+                                            android:layout_height="40dp"
+                                            android:layout_gravity="center"
+                                            android:src="@drawable/ic_assignment"
+                                            android:contentDescription="@string/image" />
+
+                                        <View
+                                            android:layout_width="1dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginLeft="5dp"
+                                            android:layout_marginRight="5dp"
+                                            android:background="@android:color/darker_gray" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:gravity="center"
+                                            android:lines="2"
+                                            android:padding="3dp"
+                                            android:text="स्थल का सर्वेक्षण"
+                                            android:textAppearance="?android:attr/textAppearanceSmall"
+                                            android:textColor="@android:color/white"
+                                            android:textSize="15sp"
+                                            android:textStyle="bold" />
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:id="@+id/ll_manrega_edit"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="10dp"
+                                        android:layout_weight="1"
+                                        android:background="@drawable/buttonshape"
+                                        android:orientation="vertical"
+                                        android:padding="5dp">
+
+                                        <RelativeLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content">
+
+                                            <ImageView
+                                                android:layout_marginTop="8dp"
+                                                android:layout_width="40dp"
+                                                android:layout_height="40dp"
+                                                android:layout_centerInParent="true"
+                                                android:src="@drawable/ic_cloud_upload"
+                                                android:contentDescription="@string/image" />
+
+                                            <TextView
+                                                android:id="@+id/pending_manrega"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_alignParentRight="true"
+                                                android:layout_marginLeft="5dp"
+                                                android:background="@drawable/circuler_shape_red_small"
+                                                android:gravity="center"
+                                                android:text="0"
+                                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                                android:textColor="#990033"
+                                                android:textStyle="bold"
+
+                                                />
+                                        </RelativeLayout>
+
+                                        <TextView
+                                            android:id="@+id/tv_other_edit"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:gravity="center"
+                                            android:lines="2"
+                                            android:padding="5dp"
+                                            android:text="अपलोड करें"
+                                            android:textAppearance="?android:attr/textAppearanceSmall"
+                                            android:textColor="@android:color/white"
+                                            android:textSize="15sp"
+                                            android:textStyle="bold" />
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:id="@+id/ll_manrega_upload"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:visibility="visible"
+                                        android:layout_margin="10dp"
+                                        android:background="@drawable/buttonshape"
+                                        android:orientation="vertical"
+                                        android:padding="5dp">
+
+                                        <RelativeLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content">
+
+                                            <ImageView
+                                                android:layout_marginTop="8dp"
+                                                android:layout_width="40dp"
+                                                android:layout_height="40dp"
+                                                android:layout_centerInParent="true"
+                                                android:src="@drawable/ic_pageview"
+                                                android:contentDescription="@string/image" />
+
+                                            <TextView
+                                                android:visibility="gone"
+                                                android:id="@+id/pending_upload_manrega"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_alignParentRight="true"
+                                                android:layout_marginLeft="5dp"
+                                                android:background="@drawable/circuler_shape_red_small"
+                                                android:gravity="center"
+                                                android:text="0"
+                                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                                android:textColor="#990033"
+                                                android:textStyle="bold"
+
+                                                />
+                                        </RelativeLayout>
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:gravity="center"
+                                            android:lines="2"
+                                            android:padding="5dp"
+                                            android:text="निरीक्षित रिपोर्ट देखें"
+                                            android:textAppearance="?android:attr/textAppearanceSmall"
+                                            android:textColor="@android:color/white"
+                                            android:textSize="15sp"
+                                            android:textStyle="bold" />
+                                    </LinearLayout>
+
+                                </LinearLayout>
+                            </LinearLayout>
+
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/mcv_remark_update"
+                            style="@style/CardView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/mtrl_card_spacing"
+                            android:layout_marginTop="@dimen/mtrl_card_spacing"
+                            android:layout_marginRight="@dimen/mtrl_card_spacing"
+                            app:cardBackgroundColor="@color/group_button_dialog_pressed_holo_light"
+                            app:cardCornerRadius="5dp"
+                            android:minHeight="40dp">
+
+                            <LinearLayout
+                                android:id="@+id/ll_remark_click"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <RelativeLayout
+                                    android:layout_margin="8dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="22dp"
+                                        android:textSize="16sp"
+                                        android:textStyle="bold"
+                                        android:textColor="@color/colorPrimaryDark"
+                                        android:layout_centerVertical="true"
+                                        android:text="टिप्पणी अद्यतन/Remark Update"/>
+
+                                    <ImageView
+                                        android:id="@+id/iv_remark_drpdwn"
+                                        android:layout_alignParentRight="true"
+                                        android:layout_width="28dp"
+                                        android:layout_height="24dp"
+                                        android:src="@drawable/ic_arrow_drop_down_black_24dp"/>
+                                </RelativeLayout>
+
+                                <LinearLayout
+                                    android:visibility="visible"
+                                    android:id="@+id/ll_remark_menu"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:weightSum="3"
+                                    android:orientation="horizontal">
+
+                                    <LinearLayout
+                                        android:id="@+id/ll_remark_add"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="10dp"
+                                        android:layout_weight="1"
+                                        android:background="@drawable/buttonshape"
+                                        android:orientation="vertical"
+                                        android:padding="5dp">
+
+                                        <ImageView
+                                            android:layout_marginTop="8dp"
+                                            android:layout_width="40dp"
+                                            android:layout_height="40dp"
+                                            android:layout_gravity="center"
+                                            android:src="@drawable/ic_assignment"
+                                            android:contentDescription="@string/image" />
+
+                                        <View
+                                            android:layout_width="1dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginLeft="5dp"
+                                            android:layout_marginRight="5dp"
+                                            android:background="@android:color/darker_gray" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:gravity="center"
+                                            android:lines="2"
+                                            android:padding="3dp"
+                                            android:text="सर्वेक्षण करें"
+                                            android:textAppearance="?android:attr/textAppearanceSmall"
+                                            android:textColor="@android:color/white"
+                                            android:textSize="15sp"
+                                            android:textStyle="bold" />
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:id="@+id/ll_remark_edit"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="10dp"
+                                        android:layout_weight="1"
+                                        android:background="@drawable/buttonshape"
+                                        android:orientation="vertical"
+                                        android:padding="5dp">
+
+                                        <RelativeLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content">
+
+                                            <ImageView
+                                                android:layout_marginTop="8dp"
+                                                android:layout_width="40dp"
+                                                android:layout_height="40dp"
+                                                android:layout_centerInParent="true"
+                                                android:src="@drawable/ic_cloud_upload"
+                                                android:contentDescription="@string/image" />
+
+                                            <TextView
+                                                android:id="@+id/pending_remark"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_alignParentRight="true"
+                                                android:layout_marginLeft="5dp"
+                                                android:background="@drawable/circuler_shape_red_small"
+                                                android:gravity="center"
+                                                android:text="0"
+                                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                                android:textColor="#990033"
+                                                android:textStyle="bold"
+
+                                                />
+                                        </RelativeLayout>
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:gravity="center"
+                                            android:lines="2"
+                                            android:padding="5dp"
+                                            android:text="अपलोड करें"
+                                            android:textAppearance="?android:attr/textAppearanceSmall"
+                                            android:textColor="@android:color/white"
+                                            android:textSize="15sp"
+                                            android:textStyle="bold" />
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:id="@+id/ll_remark_upload"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:visibility="invisible"
+                                        android:layout_margin="10dp"
+                                        android:background="@drawable/buttonshape"
+                                        android:orientation="vertical"
+                                        android:padding="5dp">
+
+                                        <RelativeLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content">
+
+                                            <ImageView
+                                                android:layout_marginTop="8dp"
+                                                android:layout_width="40dp"
+                                                android:layout_height="40dp"
+                                                android:layout_centerInParent="true"
+                                                android:src="@drawable/ic_pageview"
+                                                android:contentDescription="@string/image" />
+
+                                            <TextView
+                                                android:visibility="gone"
+                                                android:id="@+id/pending_upload_remark"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_alignParentRight="true"
+                                                android:layout_marginLeft="5dp"
+                                                android:background="@drawable/circuler_shape_red_small"
+                                                android:gravity="center"
+                                                android:text="0"
+                                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                                android:textColor="#990033"
+                                                android:textStyle="bold"
+
+                                                />
+                                        </RelativeLayout>
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:gravity="center"
+                                            android:lines="2"
+                                            android:padding="5dp"
+                                            android:text="निरीक्षित रिपोर्ट देखें"
+                                            android:textAppearance="?android:attr/textAppearanceSmall"
+                                            android:textColor="@android:color/white"
+                                            android:textSize="15sp"
+                                            android:textStyle="bold" />
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </com.google.android.material.card.MaterialCardView>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:visibility="visible"
+                        android:id="@+id/ll_building_card"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.card.MaterialCardView
+                            style="@style/CardView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/mtrl_card_spacing"
+                            android:layout_marginTop="@dimen/mtrl_card_spacing"
+                            android:layout_marginRight="@dimen/mtrl_card_spacing"
+                            app:cardBackgroundColor="@color/group_button_dialog_pressed_holo_light"
+                            app:cardCornerRadius="5dp"
+                            android:minHeight="40dp">
+
+                            <LinearLayout
+                                android:id="@+id/ll_building_click"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <RelativeLayout
+                                    android:layout_margin="8dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="22dp"
+                                        android:textSize="16sp"
+                                        android:textStyle="bold"
+                                        android:textColor="@color/colorPrimaryDark"
+                                        android:layout_centerVertical="true"
+                                        android:text="भवन का सत्यापन/सर्वेक्षण"/>
+
+                                    <ImageView
+                                        android:id="@+id/iv_building_drpdwn"
+                                        android:layout_alignParentRight="true"
+                                        android:layout_width="28dp"
+                                        android:layout_height="24dp"
+                                        android:src="@drawable/ic_arrow_drop_down_black_24dp"/>
+                                </RelativeLayout>
+
+                                <LinearLayout
+                                    android:visibility="visible"
+                                    android:id="@+id/ll_building_menu"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:weightSum="3"
+                                    android:orientation="horizontal">
+
+                                    <LinearLayout
+                                        android:id="@+id/ll_building_entry"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="10dp"
+                                        android:layout_weight="1"
+                                        android:background="@drawable/buttonshape"
+                                        android:orientation="vertical"
+                                        android:padding="5dp">
+
+                                        <ImageView
+                                            android:layout_marginTop="8dp"
+                                            android:layout_width="40dp"
+                                            android:layout_height="40dp"
+                                            android:layout_gravity="center"
+                                            android:src="@drawable/ic_assignment"
+                                            android:contentDescription="@string/image" />
+
+                                        <View
+                                            android:layout_width="1dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginLeft="5dp"
+                                            android:layout_marginRight="5dp"
+                                            android:background="@android:color/darker_gray" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:gravity="center"
+                                            android:lines="2"
+                                            android:padding="3dp"
+                                            android:text="सत्यापन/सर्वेक्षण करें"
+                                            android:textAppearance="?android:attr/textAppearanceSmall"
+                                            android:textColor="@android:color/white"
+                                            android:textSize="15sp"
+                                            android:textStyle="bold" />
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:id="@+id/ll_building_edit"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="10dp"
+                                        android:layout_weight="1"
+                                        android:background="@drawable/buttonshape"
+                                        android:orientation="vertical"
+                                        android:padding="5dp">
+
+                                        <RelativeLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content">
+
+                                            <ImageView
+                                                android:layout_marginTop="8dp"
+                                                android:layout_width="40dp"
+                                                android:layout_height="40dp"
+                                                android:layout_centerInParent="true"
+                                                android:src="@drawable/ic_cloud_upload"
+                                                android:contentDescription="@string/image" />
+
+                                            <TextView
+                                                android:id="@+id/tv_building_count"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_alignParentRight="true"
+                                                android:layout_marginLeft="5dp"
+                                                android:background="@drawable/circuler_shape_red_small"
+                                                android:gravity="center"
+                                                android:text="0"
+                                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                                android:textColor="#990033"
+                                                android:textStyle="bold"
+
+                                                />
+                                        </RelativeLayout>
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:gravity="center"
+                                            android:lines="2"
+                                            android:padding="5dp"
+                                            android:text="सुधार/अपलोड करें"
+                                            android:textAppearance="?android:attr/textAppearanceSmall"
+                                            android:textColor="@android:color/white"
+                                            android:textSize="15sp"
+                                            android:textStyle="bold" />
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:id="@+id/ll_building_upload"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:layout_margin="10dp"
+                                        android:visibility="visible"
+                                        android:background="@drawable/buttonshape"
+                                        android:orientation="vertical"
+                                        android:padding="5dp">
+
+                                        <RelativeLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content">
+
+                                            <ImageView
+                                                android:layout_marginTop="8dp"
+                                                android:layout_width="40dp"
+                                                android:layout_height="40dp"
+                                                android:layout_centerInParent="true"
+                                                android:src="@drawable/ic_pageview"
+                                                android:contentDescription="@string/image" />
+
+                                            <TextView
+                                                android:visibility="gone"
+                                                android:id="@+id/pending_upload_building"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_alignParentRight="true"
+                                                android:layout_marginLeft="5dp"
+                                                android:background="@drawable/circuler_shape_red_small"
+                                                android:gravity="center"
+                                                android:text="0"
+                                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                                android:textColor="#990033"
+                                                android:textStyle="bold"
+
+                                                />
+                                        </RelativeLayout>
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:gravity="center"
+                                            android:lines="2"
+                                            android:padding="5dp"
+                                            android:text="निरीक्षित रिपोर्ट देखें"
+                                            android:textAppearance="?android:attr/textAppearanceSmall"
+                                            android:textColor="@android:color/white"
+                                            android:textSize="15sp"
+                                            android:textStyle="bold" />
+                                    </LinearLayout>
+
+                                </LinearLayout>
+                            </LinearLayout>
+
+                        </com.google.android.material.card.MaterialCardView>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:visibility="visible"
+                        android:id="@+id/ll_nursery_card"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.card.MaterialCardView
+                            style="@style/CardView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/mtrl_card_spacing"
+                            android:layout_marginTop="@dimen/mtrl_card_spacing"
+                            android:layout_marginRight="@dimen/mtrl_card_spacing"
+                            app:cardBackgroundColor="@color/group_button_dialog_pressed_holo_light"
+                            app:cardCornerRadius="5dp"
+                            android:minHeight="40dp">
+
+                            <LinearLayout
+                                android:id="@+id/ll_plantation_click"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <RelativeLayout
+                                    android:layout_margin="8dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="22dp"
+                                        android:textSize="16sp"
+                                        android:textStyle="bold"
+                                        android:textColor="@color/colorPrimaryDark"
+                                        android:layout_centerVertical="true"
+                                        android:text="पौधशाला सृजन का सत्यापन/सर्वेक्षण"/>
+
+                                    <ImageView
+                                        android:id="@+id/iv_plantation_drpdwn"
+                                        android:layout_alignParentRight="true"
+                                        android:layout_width="28dp"
+                                        android:layout_height="24dp"
+                                        android:src="@drawable/ic_arrow_drop_down_black_24dp"/>
+                                </RelativeLayout>
+
+                                <LinearLayout
+                                    android:visibility="visible"
+                                    android:id="@+id/ll_plantation_menu"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:weightSum="3"
+                                    android:orientation="horizontal">
+
+                                    <LinearLayout
+                                        android:id="@+id/ll_Plantatin_NewEntry"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="10dp"
+                                        android:layout_weight="1"
+                                        android:background="@drawable/buttonshape"
+                                        android:orientation="vertical"
+                                        android:padding="5dp">
+
+                                        <ImageView
+                                            android:layout_marginTop="8dp"
+                                            android:layout_width="40dp"
+                                            android:layout_height="40dp"
+                                            android:layout_gravity="center"
+                                            android:src="@drawable/ic_assignment"
+                                            android:contentDescription="@string/image" />
+
+                                        <View
+                                            android:layout_width="1dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginLeft="5dp"
+                                            android:layout_marginRight="5dp"
+                                            android:background="@android:color/darker_gray" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:gravity="center"
+                                            android:lines="2"
+                                            android:padding="3dp"
+                                            android:text="सत्यापन/सर्वेक्षण करें"
+                                            android:textAppearance="?android:attr/textAppearanceSmall"
+                                            android:textColor="@android:color/white"
+                                            android:textSize="15sp"
+                                            android:textStyle="bold" />
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:id="@+id/ll_Plantatin_Edit"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="10dp"
+                                        android:layout_weight="1"
+                                        android:background="@drawable/buttonshape"
+                                        android:orientation="vertical"
+                                        android:padding="5dp">
+
+                                        <RelativeLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content">
+
+                                            <ImageView
+                                                android:layout_marginTop="8dp"
+                                                android:layout_width="40dp"
+                                                android:layout_height="40dp"
+                                                android:layout_centerInParent="true"
+                                                android:src="@drawable/ic_cloud_upload"
+                                                android:contentDescription="@string/image" />
+
+                                            <TextView
+                                                android:id="@+id/tv_nursury_count"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_alignParentRight="true"
+                                                android:layout_marginLeft="5dp"
+                                                android:background="@drawable/circuler_shape_red_small"
+                                                android:gravity="center"
+                                                android:text="0"
+                                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                                android:textColor="#990033"
+                                                android:textStyle="bold"
+
+                                                />
+                                        </RelativeLayout>
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:gravity="center"
+                                            android:lines="2"
+                                            android:padding="5dp"
+                                            android:text="सुधार/अपलोड करें"
+                                            android:textAppearance="?android:attr/textAppearanceSmall"
+                                            android:textColor="@android:color/white"
+                                            android:textSize="15sp"
+                                            android:textStyle="bold" />
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:id="@+id/ll_nursery_upload"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:layout_margin="10dp"
+                                        android:visibility="visible"
+                                        android:background="@drawable/buttonshape"
+                                        android:orientation="vertical"
+                                        android:padding="5dp">
+
+                                        <RelativeLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content">
+
+                                            <ImageView
+                                                android:layout_marginTop="8dp"
+                                                android:layout_width="40dp"
+                                                android:layout_height="40dp"
+                                                android:layout_centerInParent="true"
+                                                android:src="@drawable/ic_pageview"
+                                                android:contentDescription="@string/image" />
+
+                                            <TextView
+                                                android:visibility="gone"
+                                                android:id="@+id/pending_upload_nursery"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_alignParentRight="true"
+                                                android:layout_marginLeft="5dp"
+                                                android:background="@drawable/circuler_shape_red_small"
+                                                android:gravity="center"
+                                                android:text="0"
+                                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                                android:textColor="#990033"
+                                                android:textStyle="bold"
+
+                                                />
+                                        </RelativeLayout>
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:gravity="center"
+                                            android:lines="2"
+                                            android:padding="5dp"
+                                            android:text="निरीक्षित रिपोर्ट देखें"
+                                            android:textAppearance="?android:attr/textAppearanceSmall"
+                                            android:textColor="@android:color/white"
+                                            android:textSize="15sp"
+                                            android:textStyle="bold" />
+                                    </LinearLayout>
+
+                                </LinearLayout>
+                            </LinearLayout>
+
+                        </com.google.android.material.card.MaterialCardView>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</RelativeLayout>

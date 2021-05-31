@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="@android:color/white"
+    android:layout_height="wrap_content">
+
+    <!--<android.support.v7.widget.CardView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="80dp"-->
+    <!--android:layout_marginLeft="5dp"-->
+    <!--android:layout_marginTop="5dp">-->
+
+    <LinearLayout
+        android:id="@+id/sblist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:layout_margin="4dp"
+        android:weightSum="2"
+        android:orientation="vertical"
+        android:background="#E4EBF3">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_count"
+                android:layout_centerVertical="true"
+                android:padding="2dp"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:textSize="15sp"
+                android:text="1)" />
+
+            <LinearLayout
+                android:layout_toRightOf="@+id/tv_count"
+                android:weightSum="3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/holo_button_normal"
+                        android:text="प्रखंड"/>
+
+                    <TextView
+                        android:padding="2dp"
+                        android:id="@+id/tv_block"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:text="123"
+                        android:textColor="#151B54" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:textSize="13sp"
+                        android:text="पंचायत"
+                        android:textStyle="bold"
+                        android:textColor="@color/holo_button_normal"/>
+
+                    <TextView
+                        android:padding="2dp"
+                        android:id="@+id/tv_panchayat"
+                        android:textAlignment="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="New Text"
+                        android:textColor="#151B54" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="13sp"
+                        android:text="गाँव"
+                        android:textAlignment="center"
+                        android:textStyle="bold"
+                        android:textColor="@color/holo_button_normal"/>
+
+                    <TextView
+                        android:padding="2dp"
+                        android:id="@+id/tv_village"
+                        android:textAlignment="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="text"
+                        android:textColor="#151B54" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+
+        <LinearLayout
+            android:layout_margin="4dp"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/color_white"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/iv_show_location"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/mark_location"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="2dp"/>
+
+            <LinearLayout
+                android:layout_toLeftOf="@+id/iv_show_location"
+                android:id="@+id/ll_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:padding="2dp"
+                        android:textStyle="bold"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="निरीक्षण आईडी" />
+
+                    <TextView
+                        android:visibility="visible"
+                        android:textStyle="bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="2dp"
+                        android:text=":" />
+
+
+                    <TextView
+                        android:padding="2dp"
+                        android:id="@+id/tv_inspection_id"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="sdgk"
+                        android:textColor="#151B54" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:padding="2dp"
+                        android:textStyle="bold"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="राजस्व थाना सं."/>
+
+                    <TextView
+                        android:visibility="visible"
+                        android:textStyle="bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="2dp"
+                        android:text=":" />
+
+
+                    <TextView
+                        android:padding="2dp"
+                        android:id="@+id/tv_rajswa_thana"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="sdgk"
+                        android:textColor="#151B54" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ll_building"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:padding="2dp"
+                        android:textStyle="bold"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="खाता/खेसरा" />
+
+                    <TextView
+                        android:visibility="visible"
+                        android:textStyle="bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="2dp"
+                        android:text=":" />
+
+
+                    <TextView
+                        android:padding="2dp"
+                        android:id="@+id/tv_khata_khesra"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="sdgk"
+                        android:textColor="#151B54" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ll_consumer"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:padding="2dp"
+                        android:textStyle="bold"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="संरचना" />
+
+                    <TextView
+                        android:visibility="visible"
+                        android:textStyle="bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="2dp"
+                        android:text=":" />
+
+
+                    <TextView
+                        android:padding="2dp"
+                        android:id="@+id/tv_structure"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="sdgk"
+                        android:textColor="#151B54" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ll_nursery"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:padding="2dp"
+                        android:textStyle="bold"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="अभ्युति" />
+
+                    <TextView
+                        android:visibility="visible"
+                        android:textStyle="bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="2dp"
+                        android:text=":" />
+
+
+                    <TextView
+                        android:padding="2dp"
+                        android:id="@+id/tv_remark"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="sdgk"
+                        android:textColor="#151B54" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/ll_btn">
+
+            <LinearLayout
+                android:layout_margin="4dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/color_white"/>
+
+            <LinearLayout
+                android:weightSum="3"
+                android:visibility="visible"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:drawableLeft="@drawable/ic_delete_forever_red_24dp"
+                    android:id="@+id/btn_delete"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_weight="1"
+                    android:textSize="14dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/color_red"
+                    android:text="हटाएं"/>
+
+                <Button
+                    android:layout_marginLeft="2dp"
+                    android:id="@+id/btn_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:textSize="14dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/color_orange"
+                    android:drawableLeft="@drawable/ic_edit_orange_24dp"
+                    android:text="सुधार करें"/>
+
+                <Button
+                    android:layout_marginLeft="2dp"
+                    android:id="@+id/btn_upload"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:textSize="14dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/color_green"
+                    android:drawableLeft="@drawable/ic_file_upload_black_24dp"
+                    android:text="अपलोड करें"/>
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

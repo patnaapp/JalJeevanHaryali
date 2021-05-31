@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.CAptureFieldLocationActivity">
+    <include
+        android:id="@+id/header"
+        layout="@layout/header"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        />
+
+    <include
+        android:id="@+id/footer"
+        layout="@layout/footer"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/header"
+        android:layout_above="@+id/btn_submit">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="5dp">
+
+                <TextView
+                    android:id="@+id/tv_gram"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="भूमि का प्रकार"
+                    android:textColor="#000000"
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:id="@+id/spin_land_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/spinner_bg"
+                    android:imeOptions="actionUnspecified"
+                    android:paddingRight="20dp"
+                    android:textAppearance="?android:textAppearanceSmall"
+                    android:textColor="#43D305" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/ll_location_form"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="स्थान चिह्नित करने का निर्देश"
+                    android:textAlignment="center"
+                    android:textSize="18dp"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:layout_marginTop="4dp"/>
+
+                <RelativeLayout
+                    android:visibility="visible"
+                    android:id="@+id/rl_linear"
+                    android:background="@android:color/white"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="4dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:layout_width="230dp"
+                        android:layout_height="160dp"
+                        android:layout_centerHorizontal="true">
+
+                        <ImageView
+                            android:id="@+id/iv_field_linear"
+                            android:layout_width="220dp"
+                            android:layout_centerInParent="true"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/linear"
+                            android:scaleType="fitXY"/>
+
+                        <ImageView
+                            android:id="@+id/iv_mark5"
+                            android:layout_marginTop="60dp"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/mark_location"/>
+
+                        <ImageView
+                            android:layout_alignParentRight="true"
+                            android:id="@+id/iv_mark6"
+                            android:layout_marginTop="60dp"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/mark_location"/>
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:visibility="gone"
+                    android:id="@+id/rl_rectangle"
+                    android:background="@android:color/white"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="4dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:layout_marginTop="18dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_width="230dp"
+                        android:layout_height="160dp">
+
+                        <ImageView
+                            android:id="@+id/iv_field"
+                            android:layout_width="220dp"
+                            android:layout_centerInParent="true"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/field"
+                            android:scaleType="fitXY"/>
+
+                        <ImageView
+                            android:id="@+id/iv_mark4"
+                            android:layout_marginTop="32dp"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/mark_location"/>
+
+                        <ImageView
+                            android:id="@+id/iv_mark1"
+                            android:layout_marginTop="78dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/mark_location"/>
+
+                        <ImageView
+                            android:id="@+id/iv_mark2"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginTop="32dp"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/mark_location"/>
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:id="@+id/iv_mark3"
+                        android:layout_centerHorizontal="true"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/mark_location"/>
+
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:layout_margin="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:id="@+id/ll_buttons">
+
+                    <LinearLayout
+                        android:layout_marginTop="8dp"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:gravity="center_horizontal|center_vertical">
+
+                        <Button
+                            android:id="@+id/btn_location1"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_weight="0.5"
+                            android:background="@drawable/greenbuttonshape"
+                            android:text="पहला लोकेशन"
+                            android:textColor="#FFFFFF" />
+
+                        <Button
+                            android:id="@+id/btn_location2"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_weight="0.5"
+                            android:background="@drawable/greenbuttonshape"
+                            android:text="दूसरा लोकेशन"
+                            android:textColor="#FFFFFF" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginTop="8dp"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:gravity="center_horizontal|center_vertical">
+
+                        <Button
+                            android:id="@+id/btn_location3"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_weight="0.5"
+                            android:background="@drawable/greenbuttonshape"
+                            android:text="तीसरा लोकेशन"
+                            android:textColor="#FFFFFF" />
+
+                        <Button
+                            android:id="@+id/btn_location4"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_weight="0.5"
+                            android:background="@drawable/greenbuttonshape"
+                            android:text="चौथा लोकेशन"
+                            android:textColor="#FFFFFF" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginTop="8dp"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:gravity="center_horizontal|center_vertical">
+
+                        <Button
+                            android:id="@+id/btn_location5"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_weight="0.5"
+                            android:background="@drawable/greenbuttonshape"
+                            android:text="फाइनल लोकेशन"
+                            android:textColor="#FFFFFF" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="15dp"
+                        android:weightSum="2">
+
+                        <TextView
+                            android:id="@+id/tv_lat1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Lat 1:"/>
+
+                        <TextView
+                            android:id="@+id/tv_long1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Long 1:"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="15dp"
+                        android:weightSum="2">
+
+                        <TextView
+                            android:id="@+id/tv_lat2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Lat 2:"/>
+
+                        <TextView
+                            android:id="@+id/tv_long2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Long 2:"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="15dp"
+                        android:weightSum="2">
+
+                        <TextView
+                            android:id="@+id/tv_lat3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Lat 3:"/>
+
+                        <TextView
+                            android:id="@+id/tv_long3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Long 3:"/>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="15dp"
+                        android:weightSum="2">
+
+                        <TextView
+                            android:id="@+id/tv_lat4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Lat 4:"/>
+
+                        <TextView
+                            android:id="@+id/tv_long4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Long 4:"/>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="15dp"
+                        android:weightSum="2">
+
+                        <TextView
+                            android:id="@+id/tv_lat5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Lat 5:: "/>
+
+                        <TextView
+                            android:id="@+id/tv_long5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Long 5:"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_margin="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:id="@+id/ll_buttons_linear">
+
+                    <LinearLayout
+                        android:layout_marginTop="8dp"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:gravity="center_horizontal|center_vertical">
+
+                        <Button
+                            android:id="@+id/btn_location_lnr_1"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_weight="0.5"
+                            android:background="@drawable/greenbuttonshape"
+                            android:text="प्रथम लोकेशन"
+                            android:textColor="#FFFFFF" />
+
+                        <Button
+                            android:id="@+id/btn_location_lnr_2"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_weight="0.5"
+                            android:background="@drawable/greenbuttonshape"
+                            android:text="अंत लोकेशन"
+                            android:textColor="#FFFFFF" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="15dp"
+                        android:weightSum="2">
+
+                        <TextView
+                            android:id="@+id/tv_lat_lnr1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Lat 1: "/>
+
+                        <TextView
+                            android:id="@+id/tv_long_lnr1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Long 1:"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="15dp"
+                        android:weightSum="2">
+
+                        <TextView
+                            android:id="@+id/tv_lat_lnr2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Lat 2: "/>
+
+                        <TextView
+                            android:id="@+id/tv_long_lnr2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Long 2:"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
+        android:layout_above="@+id/footer"
+        android:id="@+id/btn_submit"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/buttonbackshape"
+        android:text="सेभ करें और फोटो लें"
+        android:textColor="#FFFFFF" />
+
+</RelativeLayout>

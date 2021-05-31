@@ -1,0 +1,1091 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_new_entry"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:alpha="0.9">
+
+
+    <include
+        android:id="@+id/footer"
+        layout="@layout/footer"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        />
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/header"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        />
+
+    <!--</RelativeLayout>-->
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/footer"
+        android:layout_below="@+id/header"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="0dp"
+        android:descendantFocusability="beforeDescendants"
+        android:focusableInTouchMode="true"
+        android:gravity="center_vertical|center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/ActivityHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="योजना का विवरण"
+            android:layout_marginBottom="8dp"/>
+
+        <ScrollView
+            android:id="@+id/reg_form"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_marginBottom="2dp">
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/footer"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/sblist"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:orientation="vertical"
+                    android:background="#C0C0C0">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="3dp">
+
+                        <TextView
+                            android:textStyle="bold"
+                            android:layout_width="140dp"
+                            android:layout_height="wrap_content"
+                            android:text="जिला" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="4dp"
+                            android:textStyle="bold"
+                            android:text=":"/>
+
+                        <TextView
+                            android:id="@+id/tv_district"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="6dp"
+                            android:text="New Text"
+                            android:textColor="#151B54" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="3dp">
+
+                        <TextView
+                            android:textStyle="bold"
+
+                            android:layout_width="140dp"
+                            android:layout_height="wrap_content"
+                            android:text="प्रखंड" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="4dp"
+                            android:textStyle="bold"
+                            android:text=":"/>
+
+                        <TextView
+                            android:id="@+id/tv_block"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="6dp"
+                            android:text="New Text"
+                            android:textColor="#151B54" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="3dp">
+
+                        <TextView
+                            android:textStyle="bold"
+
+                            android:layout_width="140dp"
+                            android:layout_height="wrap_content"
+                            android:text="पंचायत" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="4dp"
+                            android:textStyle="bold"
+                            android:text=":"/>
+
+                        <TextView
+                            android:id="@+id/tv_panchayat"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="6dp"
+                            android:text="New Text"
+                            android:textColor="#151B54" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="3dp">
+
+                        <TextView
+                            android:textStyle="bold"
+
+                            android:layout_width="140dp"
+                            android:layout_height="wrap_content"
+                            android:text="वार्ड" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="4dp"
+                            android:textStyle="bold"
+                            android:text=":"/>
+
+                        <TextView
+                            android:id="@+id/tv_village"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="6dp"
+                            android:text="New Text"
+                            android:textColor="#151B54" />
+                    </LinearLayout>
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="3dp">
+
+                        <TextView
+                            android:textStyle="bold"
+                            android:layout_width="140dp"
+                            android:layout_height="wrap_content"
+                            android:text="क्रियान्वयन विभाग" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="4dp"
+                            android:textStyle="bold"
+                            android:text=":"/>
+
+                        <TextView
+
+                            android:id="@+id/tv_kriwayan_vibhag"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="6dp"
+                            android:lines="2"
+
+                            android:text="123"
+                            android:textColor="#151B54" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="3dp">
+
+                        <TextView
+                            android:textStyle="bold"
+                            android:layout_width="140dp"
+                            android:layout_height="wrap_content"
+                            android:text="अवयव का नाम" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="4dp"
+                            android:textStyle="bold"
+                            android:text=":"/>
+
+                        <TextView
+                            android:id="@+id/tv_abya_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="6dp"
+                            android:text="rrrrr"
+                            android:textColor="#151B54" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="3dp">
+
+                        <TextView
+                            android:textStyle="bold"
+                            android:layout_width="140dp"
+                            android:layout_height="wrap_content"
+                            android:text="कार्य/सरंचना का प्रकार" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="4dp"
+                            android:textStyle="bold"
+                            android:text=":"/>
+
+                        <TextView
+                            android:id="@+id/tv_sanrachna_type"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="6dp"
+                            android:text="rrrrr"
+                            android:textColor="#151B54" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="3dp">
+
+                        <TextView
+                            android:textStyle="bold"
+                            android:layout_width="140dp"
+                            android:layout_height="wrap_content"
+                            android:text="सरंचना का माप " />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="4dp"
+                            android:textStyle="bold"
+                            android:text=":"/>
+
+                        <TextView
+                            android:id="@+id/tv_sanrachna_measurement"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="6dp"
+                            android:text="rrrrr"
+                            android:textColor="#151B54" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="3dp">
+
+                        <TextView
+                            android:textStyle="bold"
+                            android:layout_width="140dp"
+                            android:layout_height="wrap_content"
+                            android:text="प्रकलित राशि" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="4dp"
+                            android:textStyle="bold"
+                            android:text=":"/>
+
+                        <TextView
+                            android:id="@+id/tv_estimated_amount"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="6dp"
+                            android:text="rrrrr"
+                            android:textColor="#151B54" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="3dp">
+
+                        <TextView
+                            android:textStyle="bold"
+                            android:layout_width="140dp"
+                            android:layout_height="wrap_content"
+                            android:text="अनुमोदन की तिथि" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="4dp"
+                            android:textStyle="bold"
+                            android:text=":"/>
+
+                        <TextView
+                            android:id="@+id/tv_anumodan_tithi"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="6dp"
+                            android:text="rrrrr"
+                            android:textColor="#151B54" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="3dp">
+
+                        <TextView
+                            android:textStyle="bold"
+                            android:layout_width="140dp"
+                            android:layout_height="wrap_content"
+                            android:text="प्रशासनिक स्वीकृति तिथि" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="4dp"
+                            android:textStyle="bold"
+                            android:text=":"/>
+
+                        <TextView
+                            android:id="@+id/tv_prashasnik_date"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="6dp"
+                            android:text="sdgk"
+                            android:textColor="#151B54" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="3dp">
+
+                        <TextView
+                            android:textStyle="bold"
+
+                            android:layout_width="140dp"
+                            android:layout_height="wrap_content"
+                            android:text="MIS योजना code" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="4dp"
+                            android:textStyle="bold"
+                            android:text=":"/>
+
+                        <TextView
+                            android:id="@+id/tv_yojna_code"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="6dp"
+                            android:text="New Text"
+                            android:textColor="#151B54" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="3dp">
+
+                        <TextView
+                            android:textStyle="bold"
+                            android:layout_width="140dp"
+                            android:layout_height="wrap_content"
+                            android:text="उद्घाटन/शिलान्यास" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="4dp"
+                            android:textStyle="bold"
+                            android:text=":"/>
+
+                        <TextView
+                            android:id="@+id/tv_scheme_type"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="6dp"
+                            android:text="sdgk"
+                            android:textColor="#151B54" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+<!--                <LinearLayout-->
+<!--                    android:id="@+id/ll_required_field"-->
+<!--                    android:layout_marginTop="8dp"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:orientation="vertical">-->
+
+<!--                    <RelativeLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="30dp"-->
+<!--                        android:layout_marginLeft="10dp"-->
+<!--                        android:layout_marginRight="10dp"-->
+<!--                        android:gravity="center_vertical|center_horizontal"-->
+
+<!--                        android:background="@color/colorPrimaryDark"-->
+<!--                        android:orientation="horizontal">-->
+
+<!--                        <TextView-->
+<!--                            android:layout_marginTop="4dp"-->
+<!--                            android:textColor="#fff"-->
+<!--                            android:textStyle="bold"-->
+<!--                            android:textAlignment="center"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="match_parent"-->
+<!--                            android:text="मनरेगा स्थल का आवश्यक विवरण भरें"-->
+<!--                            android:layout_marginBottom="8dp"/>-->
+
+<!--                    </RelativeLayout>-->
+
+<!--                    <LinearLayout-->
+<!--                        android:id="@+id/ll_land_detail"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:orientation="vertical">-->
+<!--                        <LinearLayout-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:weightSum="2"-->
+<!--                            android:orientation="horizontal">-->
+
+<!--                            <LinearLayout-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:layout_weight="1"-->
+<!--                                android:gravity="center"-->
+<!--                                android:orientation="vertical"-->
+<!--                                android:paddingLeft="10dp"-->
+<!--                                android:paddingTop="3dp"-->
+<!--                                android:paddingRight="6dp"-->
+<!--                                android:paddingBottom="5dp">-->
+
+<!--                                <TextView-->
+<!--                                    android:layout_width="match_parent"-->
+<!--                                    android:layout_height="wrap_content"-->
+<!--                                    android:text="खाता संख्या *"-->
+<!--                                    android:textColor="#000000"-->
+<!--                                    android:textStyle="bold" />-->
+
+<!--                                <EditText-->
+<!--                                    android:id="@+id/et_khaata"-->
+<!--                                    android:layout_width="match_parent"-->
+<!--                                    android:layout_height="wrap_content"-->
+<!--                                    android:background="@drawable/edittext_style"-->
+<!--                                    android:hint="खाता संख्या डाले"-->
+<!--                                    android:inputType="number"-->
+<!--                                    android:maxLength="30"-->
+<!--                                    android:padding="10dp"-->
+<!--                                    android:textColor="#000000" />-->
+<!--                            </LinearLayout>-->
+
+<!--                            <LinearLayout-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:layout_weight="1"-->
+<!--                                android:gravity="center"-->
+<!--                                android:orientation="vertical"-->
+<!--                                android:paddingTop="3dp"-->
+<!--                                android:paddingRight="10dp"-->
+<!--                                android:paddingBottom="5dp">-->
+
+<!--                                <TextView-->
+<!--                                    android:layout_width="match_parent"-->
+<!--                                    android:layout_height="wrap_content"-->
+<!--                                    android:text="खेसरा संख्या *"-->
+<!--                                    android:textColor="#000000"-->
+<!--                                    android:textStyle="bold" />-->
+
+<!--                                <EditText-->
+<!--                                    android:id="@+id/et_khesra"-->
+<!--                                    android:layout_width="match_parent"-->
+<!--                                    android:layout_height="wrap_content"-->
+<!--                                    android:background="@drawable/edittext_style"-->
+<!--                                    android:hint="खेसरा संख्या डाले"-->
+<!--                                    android:inputType="number"-->
+<!--                                    android:maxLength="30"-->
+<!--                                    android:padding="10dp"-->
+<!--                                    android:textColor="#000000" />-->
+<!--                            </LinearLayout>-->
+<!--                        </LinearLayout>-->
+
+<!--                        <LinearLayout-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:orientation="horizontal"-->
+<!--                            android:weightSum="2">-->
+
+<!--                            <LinearLayout-->
+<!--                                android:visibility="gone"-->
+<!--                                android:id="@+id/ll_tree_type"-->
+<!--                                android:layout_weight="1"-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:gravity="center"-->
+<!--                                android:orientation="vertical"-->
+<!--                                android:paddingLeft="10dp"-->
+<!--                                android:paddingTop="3dp"-->
+<!--                                android:paddingRight="10dp"-->
+<!--                                android:paddingBottom="5dp">-->
+
+<!--                                <TextView-->
+<!--                                    android:id="@+id/tv_tree_type"-->
+<!--                                    android:layout_width="match_parent"-->
+<!--                                    android:layout_height="wrap_content"-->
+<!--                                    android:text="पेड़ का प्रकार *"-->
+<!--                                    android:textColor="#000000"-->
+<!--                                    android:textStyle="bold" />-->
+
+<!--                                <Spinner-->
+<!--                                    android:id="@+id/spin_tree_type"-->
+<!--                                    android:layout_width="match_parent"-->
+<!--                                    android:layout_height="wrap_content"-->
+<!--                                    android:background="@drawable/spinner_bg"-->
+<!--                                    android:imeOptions="actionUnspecified"-->
+<!--                                    android:paddingRight="20dp"-->
+<!--                                    android:textAppearance="?android:textAppearanceSmall"-->
+<!--                                    android:textColor="#43D305" />-->
+<!--                            </LinearLayout>-->
+
+
+
+<!--                        </LinearLayout>-->
+
+<!--                        <LinearLayout-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:gravity="center"-->
+<!--                            android:orientation="vertical"-->
+<!--                            android:paddingLeft="10dp"-->
+<!--                            android:paddingTop="3dp"-->
+<!--                            android:paddingRight="6dp"-->
+<!--                            android:paddingBottom="5dp">-->
+
+<!--                            <TextView-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:text="रकबा (मीटर में)*"-->
+<!--                                android:textColor="#000000"-->
+<!--                                android:textStyle="bold" />-->
+
+<!--                            <EditText-->
+<!--                                android:id="@+id/et_rakba"-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:background="@drawable/edittext_style"-->
+<!--                                android:hint="रकबा डाले"-->
+<!--                                android:inputType="numberDecimal"-->
+<!--                                android:maxLength="30"-->
+<!--                                android:padding="10dp"-->
+<!--                                android:textColor="#000000" />-->
+<!--                        </LinearLayout>-->
+
+<!--                        <LinearLayout-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:weightSum="2"-->
+<!--                            android:orientation="horizontal">-->
+
+<!--                            <LinearLayout-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:layout_weight="1"-->
+<!--                                android:gravity="center"-->
+<!--                                android:orientation="vertical"-->
+<!--                                android:paddingLeft="10dp"-->
+<!--                                android:paddingTop="3dp"-->
+<!--                                android:paddingRight="6dp"-->
+<!--                                android:paddingBottom="5dp">-->
+
+<!--                                <TextView-->
+<!--                                    android:layout_width="match_parent"-->
+<!--                                    android:layout_height="wrap_content"-->
+<!--                                    android:text="जमींदार का नाम *"-->
+<!--                                    android:textColor="#000000"-->
+<!--                                    android:textStyle="bold" />-->
+
+<!--                                <EditText-->
+<!--                                    android:id="@+id/et_owner_name"-->
+<!--                                    android:layout_width="match_parent"-->
+<!--                                    android:layout_height="wrap_content"-->
+<!--                                    android:background="@drawable/edittext_style"-->
+<!--                                    android:hint="ज़मींदार का नाम डाले"-->
+<!--                                    android:inputType="textCapWords"-->
+<!--                                    android:maxLength="30"-->
+<!--                                    android:padding="10dp"-->
+<!--                                    android:textColor="#000000" />-->
+<!--                            </LinearLayout>-->
+
+<!--                            <LinearLayout-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:layout_weight="1"-->
+<!--                                android:gravity="center"-->
+<!--                                android:orientation="vertical"-->
+<!--                                android:paddingTop="3dp"-->
+<!--                                android:paddingRight="10dp"-->
+<!--                                android:paddingBottom="5dp">-->
+
+<!--                                <TextView-->
+<!--                                    android:layout_width="match_parent"-->
+<!--                                    android:layout_height="wrap_content"-->
+<!--                                    android:text="ज़मींदार का मोबाइल *"-->
+<!--                                    android:textColor="#000000"-->
+<!--                                    android:textStyle="bold" />-->
+
+<!--                                <EditText-->
+<!--                                    android:id="@+id/et_mobile"-->
+<!--                                    android:layout_width="match_parent"-->
+<!--                                    android:layout_height="wrap_content"-->
+<!--                                    android:background="@drawable/edittext_style"-->
+<!--                                    android:hint="ज़मींदार का मोबाइल डाले"-->
+<!--                                    android:inputType="number"-->
+<!--                                    android:maxLength="10"-->
+<!--                                    android:padding="10dp"-->
+<!--                                    android:textColor="#000000" />-->
+<!--                            </LinearLayout>-->
+<!--                        </LinearLayout>-->
+<!--                    </LinearLayout>-->
+
+<!--                    <LinearLayout-->
+<!--                        android:id="@+id/ll_electricity"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:weightSum="2"-->
+<!--                        android:orientation="horizontal">-->
+
+<!--                        <LinearLayout-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_weight="1"-->
+<!--                            android:gravity="center"-->
+<!--                            android:orientation="vertical"-->
+<!--                            android:paddingLeft="10dp"-->
+<!--                            android:paddingTop="3dp"-->
+<!--                            android:paddingRight="6dp"-->
+<!--                            android:paddingBottom="5dp">-->
+
+<!--                            <TextView-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:text="उपभोक्ता संख्या *"-->
+<!--                                android:textColor="#000000"-->
+<!--                                android:textStyle="bold" />-->
+
+<!--                            <EditText-->
+<!--                                android:id="@+id/et_consumer_no"-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:background="@drawable/edittext_style"-->
+<!--                                android:hint="उपभोक्ता संख्या डाले"-->
+<!--                                android:inputType="number"-->
+<!--                                android:maxLength="30"-->
+<!--                                android:padding="10dp"-->
+<!--                                android:textColor="#000000" />-->
+<!--                        </LinearLayout>-->
+
+<!--                        <LinearLayout-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_weight="1"-->
+<!--                            android:gravity="center"-->
+<!--                            android:orientation="vertical"-->
+<!--                            android:paddingTop="3dp"-->
+<!--                            android:paddingRight="10dp"-->
+<!--                            android:paddingBottom="5dp">-->
+
+<!--                            <TextView-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:text="उपभोक्ता बिल *"-->
+<!--                                android:textColor="#000000"-->
+<!--                                android:textStyle="bold" />-->
+
+<!--                            <EditText-->
+<!--                                android:id="@+id/et_consumer_bill"-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:background="@drawable/edittext_style"-->
+<!--                                android:hint="उपभोक्ता बिल डाले"-->
+<!--                                android:inputType="number"-->
+<!--                                android:maxLength="10"-->
+<!--                                android:padding="10dp"-->
+<!--                                android:textColor="#000000" />-->
+<!--                        </LinearLayout>-->
+<!--                    </LinearLayout>-->
+
+<!--                </LinearLayout>-->
+
+<!--                <LinearLayout-->
+<!--                    android:id="@+id/ll_tree_count"-->
+<!--                    android:layout_marginTop="8dp"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:orientation="horizontal"-->
+<!--                    android:weightSum="2">-->
+
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_weight="1"-->
+<!--                        android:gravity="center"-->
+<!--                        android:orientation="vertical"-->
+<!--                        android:paddingLeft="10dp"-->
+<!--                        android:paddingRight="6dp"-->
+<!--                        android:paddingBottom="5dp">-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:text="पौधे की संख्या *"-->
+<!--                            android:textColor="#000000"-->
+<!--                            android:textStyle="bold" />-->
+
+<!--                        <EditText-->
+<!--                            android:id="@+id/et_total_tree"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:background="@drawable/edittext_style"-->
+<!--                            android:hint="पौधे की संख्या डाले"-->
+<!--                            android:inputType="number"-->
+<!--                            android:maxLength="30"-->
+<!--                            android:padding="10dp"-->
+<!--                            android:textColor="#000000" />-->
+<!--                    </LinearLayout>-->
+
+<!--                    <LinearLayout-->
+<!--                        android:layout_weight="1"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:gravity="center"-->
+<!--                        android:orientation="vertical"-->
+<!--                        android:paddingLeft="10dp"-->
+<!--                        android:paddingRight="6dp"-->
+<!--                        android:paddingBottom="5dp">-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:text="जीवित पौधे की संख्या *"-->
+<!--                            android:textColor="#000000"-->
+<!--                            android:textStyle="bold" />-->
+
+<!--                        <EditText-->
+<!--                            android:id="@+id/et_live_tree"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:background="@drawable/edittext_style"-->
+<!--                            android:hint="जीवित पौधे की संख्या डाले"-->
+<!--                            android:inputType="number"-->
+<!--                            android:maxLength="30"-->
+<!--                            android:padding="10dp"-->
+<!--                            android:textColor="#000000" />-->
+<!--                    </LinearLayout>-->
+
+<!--                </LinearLayout>-->
+
+                <LinearLayout
+                    android:id="@+id/ll_phase1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/rl_phase1"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:gravity="center_vertical|center_horizontal"
+
+                        android:background="@color/color_orange"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_marginTop="4dp"
+                            android:id="@+id/tv_title_phase1"
+                            android:textColor="#fff"
+                            android:textStyle="bold"
+                            android:textAlignment="center"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="Stage 1 (कार्य प्रारंभ करने से पहले)"
+                            android:layout_marginBottom="8dp"/>
+
+                        <ImageView
+                            android:id="@+id/img_phase1"
+                            android:padding="4dp"
+                            android:layout_width="28dp"
+                            android:layout_height="28dp"
+                            android:src="@drawable/checked"
+                            android:layout_alignParentEnd="true"/>
+                    </RelativeLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/ll_entry_phase1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingBottom="5dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="अभ्युक्ति "
+                            android:textColor="#000000"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/et_remark_phase1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/edittext_style"
+                            android:hint="अभ्युक्ति डाले"
+                            android:inputType="textCapWords"
+                            android:maxLength="30"
+                            android:padding="10dp"
+                            android:textColor="#000000" />
+
+                        <LinearLayout
+                            android:layout_marginTop="8dp"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal|center_vertical">
+
+                            <Button
+                                android:id="@+id/btn_phase1"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:background="@drawable/greenbuttonshape"
+                                android:text="सेभ करें और फोटो लें"
+                                android:textColor="#FFFFFF" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_phase2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/rl_phase2"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:gravity="center_vertical|center_horizontal"
+
+                        android:background="@color/color_orange"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_marginTop="4dp"
+                            android:id="@+id/tv_title_phase2"
+                            android:textColor="#fff"
+                            android:textStyle="bold"
+                            android:textAlignment="center"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="Stage 2 (40-60% कार्य पूर्ण के दौरान)"
+                            android:layout_marginBottom="8dp"/>
+
+                        <ImageView
+                            android:id="@+id/img_phase2"
+                            android:padding="4dp"
+                            android:layout_width="28dp"
+                            android:layout_height="28dp"
+                            android:src="@drawable/checked"
+                            android:layout_alignParentEnd="true"/>
+                    </RelativeLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/ll_entry_phase2"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingBottom="5dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="अभ्युक्ति "
+                            android:textColor="#000000"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/et_remark_phase2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/edittext_style"
+                            android:hint="अभ्युक्ति डाले"
+                            android:inputType="textCapWords"
+                            android:maxLength="30"
+                            android:padding="10dp"
+                            android:textColor="#000000" />
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal|center_vertical">
+
+                            <Button
+                                android:id="@+id/btn_phase2"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:background="@drawable/greenbuttonshape"
+                                android:text="सेभ करें और फोटो लें"
+                                android:textColor="#FFFFFF" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_phase3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/rl_phase3"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:gravity="center_vertical|center_horizontal"
+
+                        android:background="@color/color_orange"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_marginTop="4dp"
+                            android:id="@+id/tv_title_phase3"
+                            android:textColor="#fff"
+                            android:textStyle="bold"
+                            android:textAlignment="center"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="Stage 3 (कार्य पूरा होने के बाद)"
+                            android:layout_marginBottom="8dp"/>
+
+                        <ImageView
+                            android:id="@+id/img_phase3"
+                            android:padding="4dp"
+                            android:layout_width="28dp"
+                            android:layout_height="28dp"
+                            android:src="@drawable/checked"
+                            android:layout_alignParentEnd="true"/>
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_entry_phase3"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingBottom="5dp">
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="अभ्युक्ति "
+                            android:textColor="#000000"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/et_remark_phase3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/edittext_style"
+                            android:hint="अभ्युक्ति डाले"
+                            android:inputType="textCapWords"
+                            android:maxLength="30"
+                            android:padding="10dp"
+                            android:textColor="#000000" />
+
+                        <LinearLayout
+                            android:layout_marginTop="8dp"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal|center_vertical">
+
+                            <Button
+                                android:id="@+id/btn_phase3"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:background="@drawable/greenbuttonshape"
+                                android:text="सेभ करें और फोटो लें"
+                                android:textColor="#FFFFFF" />
+                    </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </ScrollView>
+
+    </LinearLayout>
+
+</RelativeLayout>
