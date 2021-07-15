@@ -845,19 +845,22 @@ public class  PondInspectionActivity extends Activity implements AdapterView.OnI
         villageNameArray = new ArrayList<String>();
         villageNameArray.add("-गाँव का चयन करे-");
         int i = 0, setId= 0;
-        for (VillageListEntity dept_list : villageList) {
-            villageNameArray.add(dept_list.getVillName());
-            if(villageID.equals(dept_list.getVillCode())){
-                setId= i;
+        if(villageList.size()>0) {
+            for (VillageListEntity dept_list : villageList) {
+                villageNameArray.add(dept_list.getVillName());
+                if (villageID.equals(dept_list.getVillCode())) {
+                    setId = i;
+                }
+                i++;
             }
-            i++;
-        }
-        villageAdapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, villageNameArray);
-        villageAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spin_gram.setAdapter(villageAdapter);
 
-        if(id > 0){
-            spin_gram.setSelection(setId+1);
+            villageAdapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, villageNameArray);
+            villageAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+            spin_gram.setAdapter(villageAdapter);
+
+            if (id > 0) {
+                spin_gram.setSelection(setId + 1);
+            }
         }
     }
 

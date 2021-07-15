@@ -56,6 +56,12 @@ public class NurseryReportActivity extends Activity implements AdapterView.OnIte
         DistrictCode = intent.getStringExtra("DistrictCode");
         userId = intent.getStringExtra("userId");
 
+        if(type.equals(AppConstant.NURSURY)){
+            tv_header.setText("पौधशाला का सत्यापित रिपोर्ट");
+        }else{
+            tv_header.setText("भवन का सत्यापित रिपोर्ट");
+        }
+
         tv_Norecord.setVisibility(View.GONE);
 
         if(Utiilties.isOnline(this)){
@@ -187,9 +193,16 @@ public class NurseryReportActivity extends Activity implements AdapterView.OnIte
         }
         @Override
         protected void onPreExecute() {
-            this.dialog.setCanceledOnTouchOutside(false);
-            this.dialog.setMessage("नर्सरी का रिपोर्ट लोड हो रहा है...");
-            this.dialog.show();
+            if(type.equals(AppConstant.NURSURY)){
+                this.dialog.setCanceledOnTouchOutside(false);
+                this.dialog.setMessage("नर्सरी का रिपोर्ट लोड हो रहा है...");
+                this.dialog.show();
+            }else{
+                this.dialog.setCanceledOnTouchOutside(false);
+                this.dialog.setMessage("भवन का रिपोर्ट लोड हो रहा है...");
+                this.dialog.show();
+            }
+
         }
 
         @Override

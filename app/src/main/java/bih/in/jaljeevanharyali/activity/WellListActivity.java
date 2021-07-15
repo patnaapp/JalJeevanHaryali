@@ -47,7 +47,7 @@ public class WellListActivity extends Activity implements AdapterView.OnItemSele
     ArrayList<String> panchayatNameArray;
     ArrayAdapter<String> panchayatadapter;
 
-    String blockCode,blockName,DistrictCode,panchayatCode,panchayatName="",structureId="2";
+    String blockCode,blockName,DistrictCode,panchayatCode,panchayatName="",structureId="2",Dpt_Id;
 
     String strucuteOption[] = {"-चयन करे-","कुँआ", "चापाकल"};
     UserDetails userInfo;
@@ -64,6 +64,12 @@ public class WellListActivity extends Activity implements AdapterView.OnItemSele
         DistrictCode = userInfo.getDistrictCode();
         blockCode = userInfo.getBlockCode();
         blockName = userInfo.getBlockName();
+        Dpt_Id = userInfo.getDeptId();
+        if(Dpt_Id.equals("10")){
+            rb_chapakal.setVisibility(View.GONE);
+        }else{
+            rb_chapakal.setVisibility(View.VISIBLE);
+        }
 
         if(userInfo.getUserrole().equals(AppConstant.DEPARTMENT)){
             ll_block.setVisibility(View.VISIBLE);

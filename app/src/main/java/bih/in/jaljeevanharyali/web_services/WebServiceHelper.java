@@ -1340,9 +1340,9 @@ public class WebServiceHelper{
     }
 
     public static ArrayList<PublicNurseryBuildingEntity> getNurseryBuildingListLocationWise(String latitude, String longitude, String type) {
-        String lat = "25.9969262", lng = "85.58580858";
+        //String lat = "25.9969262", lng = "85.58580858";
         SoapObject res1;
-        res1=getServerData(type.equals(AppConstant.BUILDING) ? GETBUILDINGLISTLOCATIONWISE: GETNURSERYLISTLOCATIONWISE, NurseryEntity.NurseryEntity_CLASS, "Latitude","Longitude",lat, lng);
+        res1=getServerData(type.equals(AppConstant.BUILDING) ? GETBUILDINGLISTLOCATIONWISE: GETNURSERYLISTLOCATIONWISE, NurseryEntity.NurseryEntity_CLASS, "Latitude","Longitude",latitude, longitude);
         int TotalProperty=0;
         if(res1!=null) TotalProperty= res1.getPropertyCount();
 

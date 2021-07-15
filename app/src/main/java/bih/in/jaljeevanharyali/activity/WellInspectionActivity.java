@@ -43,6 +43,7 @@ import bih.in.jaljeevanharyali.entity.UserDetails;
 import bih.in.jaljeevanharyali.entity.VillageListEntity;
 import bih.in.jaljeevanharyali.entity.WellInspectionEntity;
 import bih.in.jaljeevanharyali.utility.AppConstant;
+import bih.in.jaljeevanharyali.utility.CommonPref;
 import bih.in.jaljeevanharyali.utility.Utiilties;
 import bih.in.jaljeevanharyali.web_services.WebServiceHelper;
 
@@ -371,7 +372,9 @@ public class WellInspectionActivity extends Activity implements AdapterView.OnIt
                         spin_well_type.setSelection(pondIndex);
                         String P_Type=info.getPrivate_or_Public();
                         if(P_Type.equalsIgnoreCase("C")){
-                            spin_owner_dept.setSelection(Integer.parseInt(wellDeptName));
+                           String _spin_dept_name = dataBaseHelper.getNameFor("DepartmentList", "DeptId", "DeptNameHn", wellDeptName);
+                          //  spin_owner_dept.setSelection(Integer.parseInt(wellDeptName));
+                            spin_owner_dept.setSelection(((ArrayAdapter<String>) spin_owner_dept.getAdapter()).getPosition(_spin_dept_name));
                             spin_flier.setSelection(flierValue.contains("Y") ? 1 : 2);
                             //spin_water_availibility.setSelection(waterAvblValue.contains("Y") ? 1 : 2);
                             spin_encroachment_status.setSelection(encrhmntStatusValue.contains("Y") ? 1 : 2);
@@ -653,27 +656,73 @@ public class WellInspectionActivity extends Activity implements AdapterView.OnIt
     }
 
 
-    public void loadSpinnerPondLakeDept() {
+//    public void loadSpinnerPondLakeDept() {
+//
+//        deptList = dataBaseHelper.getExecDepartmentList();
+//        deptNameArray = new ArrayList<String>();
+//        deptNameArray.add("-चयन करे-");
+//        int i = 0;
+//        for (DepartmentEntity info : deptList) {
+//            deptNameArray.add(info.getDeptNameHn());
+//            if(info.getDeptId().equals(userInfo.getDeptId())){
+//                i = deptList.indexOf(info);
+//            }
+//        }
+//        deptAdapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, deptNameArray);
+//        deptAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+//        spin_owner_dept.setAdapter(deptAdapter);
+//
+//
+//        //if(userInfo.getUserrole().equals(AppConstant.DEPARTMENT)){
+//
+//            //spin_owner_dept.setSelection(i + 1);
+//
+//            spin_owner_dept.setSelection(i+1);
+//            spin_owner_dept.setEnabled(false);
+//
+//            //spin_owner_dept.setEnabled(false);
+//
+//
+//       // }
+//    }
+
+    public void loadSpinnerPondLakeDept()
+    {
 
         deptList = dataBaseHelper.getExecDepartmentList();
-        deptNameArray = new ArrayList<String>();
-        deptNameArray.add("-चयन करे-");
-        int i = 0;
-        for (DepartmentEntity info : deptList) {
-            deptNameArray.add(info.getDeptNameHn());
-            if(info.getDeptId().equals(userInfo.getDeptId())){
-                i = deptList.indexOf(info);
-            }
+        String[] typeNameArray = new String[deptList.size() + 1];
+        typeNameArray[0] = "-चयन करे-";
+
+        int i = 1;
+        for (DepartmentEntity type : deptList)
+        {
+            typeNameArray[i] = type.getDeptNameHn();
+            i++;
         }
-        deptAdapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, deptNameArray);
+        deptAdapter = new ArrayAdapter<String>(this,android.R.layout.simple_spinner_item, typeNameArray);
         deptAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spin_owner_dept.setAdapter(deptAdapter);
+        int setID=0;
+        for ( i = 0; i < deptList.size(); i++)
+        {
+            //if (DivList.get(i).getDivId().equalsIgnoreCase(CommonPref.getUserDetails(NewEntryForm_Activity.this).get_DivisionID())) {
+            //if (DistrictList.get(i).get_DistCode().equalsIgnoreCase("213"))
+            // if (distList.get(i).get_DistCode().trim().equals(CommonPref.getUserDetails(HomeScreen_Activity.this).getDistrictCode().trim()))
+            if (deptList.get(i).getDeptId().trim().equals(userInfo.getDeptId()))
+            {
+                setID = i+1;
+            }
+            if(setID!=0)
+            {
+                spin_owner_dept.setSelection(setID);
+                spin_owner_dept.setEnabled(false);
+            }
+        }
 
-       // if(userInfo.getUserrole().equals(AppConstant.DEPARTMENT)){
-            spin_owner_dept.setSelection(i+1);
-            spin_owner_dept.setEnabled(false);
-       // }
     }
+ 
+
+
 
     public void loadVillageData(String pan_Code) {
         villageList = dataBaseHelper.getVillageList(pan_Code);

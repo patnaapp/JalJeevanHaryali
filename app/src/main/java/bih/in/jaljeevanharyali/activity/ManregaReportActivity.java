@@ -57,7 +57,7 @@ public class ManregaReportActivity extends Activity implements AdapterView.OnIte
         tv_Norecord.setVisibility(View.GONE);
 
         if(Utiilties.isOnline(this)){
-            new FetchWellReport(blockCode, userId).execute("");
+            new FetchWellReport(blockCode,userId).execute("");
         }else {
             Toast.makeText(this, R.string.no_internet_connection, Toast.LENGTH_SHORT).show();
         }
